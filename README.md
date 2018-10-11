@@ -1,1 +1,1 @@
-# public-goods
+# Public Goods
