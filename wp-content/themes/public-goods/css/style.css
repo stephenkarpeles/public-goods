@@ -1,7 +1,39 @@
 *:before, *:after {
   box-sizing: border-box; }
 
+html,
 body {
-  background: red; }
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: white; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.site-content {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.blog .site-content {
+  display: flex;
+  justify-content: space-between; }
+  .blog .site-content #primary {
+    width: 70%; }
+  .blog .site-content #secondary {
+    width: 25%; }
+.blog .entry-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; }
+.blog .post {
+  display: flex;
+  justify-content: space-between; }
+  .blog .post .entry-image {
+    width: 48%; }
+  .blog .post .entry-content {
+    width: 48%; }
 
 /*# sourceMappingURL=style.css.map */

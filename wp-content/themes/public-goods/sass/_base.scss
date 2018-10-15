@@ -5,6 +5,17 @@
 	}
 }
 
+html,
 body {
-	background: red;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
