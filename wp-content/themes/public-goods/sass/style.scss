@@ -1,4 +1,23 @@
+// Variables
+@import 'font-faces';
 @import 'variables';
+@import 'mixins';
+@import 'utilities';
+
+// Foundational
 @import 'base';
+@import 'typography';
+@import 'buttons';
+
+// Layout
+@import 'grid';
 @import 'layout';
+
+// Theme
+@import 'header';
+@import 'footer';
+
+// Components
+
+// Pages
 @import 'blog';

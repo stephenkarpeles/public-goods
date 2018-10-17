@@ -1,0 +1,30 @@
+// Default Font Stacks
+$sans-serif-main: 'NeuzeitBook', Helvetica, Arial, sans-serif;
+$sans-serif-alt: 'BebasNeue', Georgia, sans-serif;
+
+// Alt Font Stacks
+$sans-serif-heavy: 'NeuzeitBookHeavy', Helvetica, Arial, sans-serif;
+
+// Colors
+$primary-color: #35b3a7;
+$secondary-color: #330c48;
+$tertiary-color: #ec4252;
+$quaternary-color: #54338B;
+
+$gray-1: #868686;
+$gray-2: #999999;
+
+// Layout
+$container-width: 90%;
+$container-max-width: 1280px;
+$section-padding: 40px;
+
+// Keyframes
+@keyframes fade-in-1 {   
+  0% {     
+    opacity: 0;   
+  }    
+  100% {
+    opacity: 1;
+  }
+}
