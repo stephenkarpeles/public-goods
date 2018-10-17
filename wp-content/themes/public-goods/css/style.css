@@ -40,7 +40,8 @@ body {
 
 body {
   background: white;
-  font-family: "NeuzeitBook", Helvetica, Arial, sans-serif; }
+  font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
+  line-height: 1.375; }
 
 img {
   display: block;
@@ -64,6 +65,10 @@ h6,
 p {
   margin-top: 0; }
 
+h2 {
+  font-size: 2rem;
+  line-height: 1.2; }
+
 .site-content {
   width: 90%;
   max-width: 1280px;
@@ -76,14 +81,37 @@ p {
     width: 70%; }
   .blog .site-content #secondary {
     width: 25%; }
+.blog .entry-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 .blog .entry-image img {
   width: 380px;
   height: 380px;
   max-width: 100%;
   object-fit: cover; }
+.blog .entry-title {
+  margin-bottom: .4rem; }
+  .blog .entry-title a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
+    font-weight: 700; }
+.blog .entry-meta {
+  color: #a6aaac;
+  font-size: .85rem;
+  margin-bottom: .75em; }
+  .blog .entry-meta a {
+    color: #a6aaac; }
+.blog .entry-excerpt {
+  line-height: 1.5;
+  margin-bottom: 1em; }
+.blog .entry-more-link a {
+  color: #000000; }
 .blog .post {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 4em; }
   .blog .post .entry-image {
     width: 48%; }
   .blog .post .entry-content {

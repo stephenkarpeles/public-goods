@@ -27,37 +27,20 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php
-					public_goods_posted_on();
-					public_goods_posted_by();
-					?>
+					by <?php the_author(); ?>. <?php the_date('M. j, Y'); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Read More<span class="screen-reader-text"> "%s"</span>', 'public-goods' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		<div class="entry-excerpt">
+			<?php
+				echo wp_trim_words( get_the_content(), 25, '.' );
+			?>
+		</div>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'public-goods' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-		<footer class="entry-footer">
-			<?php public_goods_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		<div class="entry-more-link">
+			<a href="<?php echo get_permalink();?>">Read More</a>
+		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

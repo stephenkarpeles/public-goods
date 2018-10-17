@@ -12,6 +12,12 @@
 		}
 	}
 
+	.entry-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.entry-image {
 		img {
 			width: 380px;
@@ -21,9 +27,42 @@
 		}
 	}
 
+	.entry-title {
+		margin-bottom: .4rem;
+
+		a {
+			color: $text-color-main;
+			text-decoration: none;
+			font-family: $sans-serif-heavy;
+			font-weight: 700;
+		}
+	}
+
+	.entry-meta {
+		color: $text-color-light;
+		font-size: .85rem;
+		margin-bottom: .75em;
+
+		a {
+      color: $text-color-light;			
+		}
+	}
+
+	.entry-excerpt {
+		line-height: 1.5;
+		margin-bottom: 1em;
+	}
+
+	.entry-more-link {
+		a {
+			color: $text-color-main;
+		}
+	}
+
 	.post {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4em;
 
     .entry-image {
     	width: 48%;
