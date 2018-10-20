@@ -1,5 +1,5 @@
 .site-content {
-	width: 90%;
-	max-width: 1280px;
+	width: $container-width;
+	max-width: $container-max-width;
 	margin: 0 auto;
 }

@@ -27,7 +27,7 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					by <?php the_author(); ?>. <?php the_date('M. j, Y'); ?>
+					by <?php the_author(); ?>. <?php the_date('M j, Y'); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
