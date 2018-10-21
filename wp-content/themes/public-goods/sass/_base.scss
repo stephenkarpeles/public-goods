@@ -24,6 +24,12 @@ img {
 
 a {
 	text-decoration: none;
+	transition: all .15s ease;
+
+	&:hover,
+	&:focus {
+    opacity: .6;
+	}
 }
 
 .screen-reader-text {

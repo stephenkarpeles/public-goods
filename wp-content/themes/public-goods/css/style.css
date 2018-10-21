@@ -48,7 +48,10 @@ img {
   max-width: 100%; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all .15s ease; }
+  a:hover, a:focus {
+    opacity: .6; }
 
 .screen-reader-text {
   border: 0;
@@ -99,6 +102,7 @@ h2 {
   margin: 0 auto; }
 
 .site-branding {
+  position: relative;
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
@@ -118,6 +122,22 @@ h2 {
   .site-branding p {
     margin-bottom: 0; }
 
+.custom-logo-link img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13px;
+  width: 110px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 10;
+  cursor: pointer; }
+  .admin-bar .custom-logo-link img {
+    top: 45px; }
+    @media screen and (max-width: 782px) {
+      .admin-bar .custom-logo-link img {
+        top: 59px; } }
+
 .menu-toggle {
   display: none; }
 
@@ -125,18 +145,29 @@ h2 {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.5em 0; }
+  padding: 35px 0 30px;
+  position: relative; }
   .main-navigation ul {
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    display: flex;
+    justify-content: space-between; }
   .main-navigation li {
     list-style-type: none;
-    display: inline-block; }
+    margin: 0 1.5em; }
+    .main-navigation li:first-child {
+      margin-left: 0; }
+    .main-navigation li:last-child {
+      margin-right: 0; }
+    .main-navigation li:nth-child(2) {
+      margin-right: auto; }
   .main-navigation a {
+    font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    color: #a6aaac;
+    color: #aaaaaa;
     font-weight: 300;
-    font-size: .8rem; }
+    font-size: 12px;
+    letter-spacing: 1px; }
 
 .blog .site-content {
   display: flex;
@@ -162,16 +193,17 @@ h2 {
     font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
     font-weight: 700; }
 .blog .entry-meta {
-  color: #a6aaac;
+  color: #aaaaaa;
   font-size: .85rem;
   margin-bottom: .75em; }
   .blog .entry-meta a {
-    color: #a6aaac; }
+    color: #aaaaaa; }
 .blog .entry-excerpt {
   line-height: 1.5;
   margin-bottom: 1em; }
 .blog .entry-more-link a {
-  color: #000000; }
+  color: #000000;
+  text-decoration: underline; }
 .blog .post {
   display: flex;
   justify-content: space-between;

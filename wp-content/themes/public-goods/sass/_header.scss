@@ -1,4 +1,5 @@
 .site-branding {
+	position: relative;
 	width: $container-width;
 	max-width: $container-max-width;
 	margin: 0 auto;
@@ -23,6 +24,28 @@
 	}
 }
 
+.custom-logo-link {
+	img {
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  top: 13px;
+	  width: 110px;
+	  height: auto;
+	  margin: 0 auto;
+	  z-index: 10;
+	  cursor: pointer;
+
+	  .admin-bar & {
+			top: 45px;
+
+			@include mq(wp-bar-switch, 'max-width') {
+        top: 59px;
+			}
+	  }
+	}
+}
+
 .menu-toggle {
 	display: none;
 }
@@ -31,22 +54,39 @@
 	width: $container-width;
 	max-width: $container-max-width;
 	margin: 0 auto;
-	padding: 1.5em 0;
+	padding: 35px 0 30px;
+	position: relative;
 
 	ul {
 		padding: 0;
 		margin: 0;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	li {
 		list-style-type: none;
-		display: inline-block;
+		margin: 0 1.5em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:nth-child(2) {
+			margin-right: auto;
+		}
 	}
 
 	a {
+		font-family: $sans-serif-main;
 		text-transform: uppercase;
 		color: $text-color-light;
 		font-weight: 300;
-		font-size: .8rem;
+		font-size: 12px;
+		letter-spacing: 1px;
 	}
 }

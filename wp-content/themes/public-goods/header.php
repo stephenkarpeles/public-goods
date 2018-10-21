@@ -25,6 +25,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'public-goods' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php the_custom_logo(); ?>
+		</a>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'public-goods' ); ?></button>
 			<?php
@@ -37,8 +40,7 @@
 		
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+			  if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 				<?php
