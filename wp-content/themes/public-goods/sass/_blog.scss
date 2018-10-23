@@ -35,6 +35,8 @@
 			text-decoration: none;
 			font-family: $sans-serif-heavy;
 			font-weight: 700;
+
+			@include hover-anim-1;
 		}
 	}
 
@@ -57,6 +59,8 @@
 		a {
 			color: $text-color-main;
 			text-decoration: underline;
+
+			@include hover-anim-1;
 		}
 	}
 

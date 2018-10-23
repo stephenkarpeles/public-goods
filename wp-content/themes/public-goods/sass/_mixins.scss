@@ -58,3 +58,13 @@ $breakpoints: (
   position: absolute;
   width: 1px;
 }
+
+// Hover Animations
+@mixin hover-anim-1 {
+  transition: all .15s ease;
+
+  &:hover,
+  &:focus {
+    opacity: .6;
+  }
+}

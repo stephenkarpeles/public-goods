@@ -33,7 +33,7 @@
 	  width: 110px;
 	  height: auto;
 	  margin: 0 auto;
-	  z-index: 10;
+	  z-index: 100;
 	  cursor: pointer;
 
 	  .admin-bar & {
@@ -48,7 +48,18 @@
 
 .menu-toggle {
 	display: none;
+
+	@include mq(ipad, 'max-width') {
+    display: block;
+	}
 }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
 
 .main-navigation {
 	width: $container-width;
@@ -62,6 +73,16 @@
 		margin: 0;
 		display: flex;
 		justify-content: space-between;
+
+		@include mq(ipad, 'max-width') {
+			display: none;
+		}
+	}
+
+	&.toggled {
+		ul {
+     display: block;
+    }
 	}
 
 	li {
@@ -79,6 +100,15 @@
 		&:nth-child(2) {
 			margin-right: auto;
 		}
+
+		&:nth-child(3) a {
+      border: solid 1px $primary-color;
+      padding: 10px 17px 9px;
+    }
+
+    @include mq(desktop, 'max-width') {
+      margin: 0 1em;
+    }
 	}
 
 	a {
@@ -88,5 +118,7 @@
 		font-weight: 300;
 		font-size: 12px;
 		letter-spacing: 1px;
+
+		@include hover-anim-1;
 	}
 }
