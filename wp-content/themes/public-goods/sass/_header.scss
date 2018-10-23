@@ -22,6 +22,10 @@
 	p {
 		margin-bottom: 0;
 	}
+
+	@include mq(ipad, 'max-width') {
+    margin-bottom: 2.5rem;
+	}
 }
 
 .custom-logo-link {
@@ -137,6 +141,10 @@
 
     @include mq(ipad, 'max-width') {
     	margin: .65em 0;
+
+    	&:last-child {
+    		display: none;
+    	}
     }
 	}
 
@@ -150,4 +158,26 @@
 
 		@include hover-anim-1;
 	}
+}
+
+.mobile-cart-link {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 23px;
+
+	a {
+		font-family: $sans-serif-main;
+		text-transform: uppercase;
+		color: $text-color-light;
+		font-weight: 300;
+		font-size: 12px;
+		letter-spacing: 1px;
+
+		@include hover-anim-1;
+	}
+
+  @include mq(ipad, 'max-width') {
+    display: block
+  }
 }

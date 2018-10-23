@@ -11,10 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-image">
-	  <?php public_goods_post_thumbnail(); ?>
-	</div>
-
 	<div class="entry-content">
 		<header class="entry-header">
 			<?php
@@ -32,14 +28,12 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-image entry-image--mobile">
+		<div class="entry-image">
 		  <?php public_goods_post_thumbnail(); ?>
 		</div>
 
-		<div class="entry-excerpt">
-			<?php
-				echo wp_trim_words( get_the_content(), 25, '.' );
-			?>
+		<div class="entry-main-text">
+			<?php the_content(); ?>
 		</div>
 
 		<div class="entry-more-link">

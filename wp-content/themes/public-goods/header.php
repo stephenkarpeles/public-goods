@@ -37,6 +37,10 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+
+			<div class="mobile-cart-link">
+				<a href="https://www.publicgoods.com/cart">Cart</a>
+			</div>
 		</nav><!-- #site-navigation -->
 		
 		<div class="site-branding">

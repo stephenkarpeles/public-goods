@@ -118,6 +118,9 @@ h2 {
     margin-bottom: .5rem; }
   .site-branding p {
     margin-bottom: 0; }
+  @media screen and (max-width: 767px) {
+    .site-branding {
+      margin-bottom: 2.5rem; } }
 
 .custom-logo-link img {
   position: absolute;
@@ -200,7 +203,9 @@ h2 {
         margin: 0 1em; } }
     @media screen and (max-width: 767px) {
       .main-navigation li {
-        margin: .65em 0; } }
+        margin: .65em 0; }
+        .main-navigation li:last-child {
+          display: none; } }
   .main-navigation a {
     font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -212,13 +217,38 @@ h2 {
     .main-navigation a:hover, .main-navigation a:focus {
       opacity: .6; }
 
+.mobile-cart-link {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 23px; }
+  .mobile-cart-link a {
+    font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all .15s ease; }
+    .mobile-cart-link a:hover, .mobile-cart-link a:focus {
+      opacity: .6; }
+  @media screen and (max-width: 767px) {
+    .mobile-cart-link {
+      display: block; } }
+
 .blog .site-content {
   display: flex;
   justify-content: space-between; }
   .blog .site-content #primary {
     width: 70%; }
+    @media screen and (max-width: 767px) {
+      .blog .site-content #primary {
+        width: 100%; } }
   .blog .site-content #secondary {
     width: 25%; }
+    @media screen and (max-width: 767px) {
+      .blog .site-content #secondary {
+        display: none; } }
 .blog .entry-content {
   display: flex;
   flex-direction: column;
@@ -256,10 +286,29 @@ h2 {
 .blog .post {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4em; }
+  margin-bottom: 1rem; }
   .blog .post .entry-image {
     width: 48%; }
+    .blog .post .entry-image--mobile {
+      display: none; }
   .blog .post .entry-content {
     width: 48%; }
+  @media screen and (max-width: 767px) {
+    .blog .post {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 5rem; }
+      .blog .post .entry-image {
+        width: 100%;
+        display: none; }
+        .blog .post .entry-image--mobile {
+          display: block; }
+        .blog .post .entry-image img {
+          width: 200px;
+          height: 200px;
+          margin: 20px auto 30px; }
+      .blog .post .entry-content {
+        width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
