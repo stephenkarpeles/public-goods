@@ -115,12 +115,19 @@ h2 {
   margin-bottom: 1rem; }
   .site-branding h1 {
     font-size: 2.15rem;
-    margin-bottom: .5rem; }
+    margin-bottom: 1rem; }
+  .site-branding a {
+    color: white; }
   .site-branding p {
     margin-bottom: 0; }
+  .single .site-branding {
+    margin-bottom: 2.5rem; }
   @media screen and (max-width: 767px) {
     .site-branding {
       margin-bottom: 2.5rem; } }
+
+.site-description {
+  padding: 0 1rem; }
 
 .custom-logo-link img {
   position: absolute;
@@ -310,5 +317,17 @@ h2 {
           margin: 20px auto 30px; }
       .blog .post .entry-content {
         width: 100%; } }
+
+.single h1.entry-title {
+  margin-bottom: 1rem; }
+.single .entry-meta {
+  color: #aaaaaa;
+  margin-bottom: 1rem; }
+.single .entry-intro p {
+  padding-bottom: 1rem; }
+.single .entry-image img {
+  width: 100%;
+  height: 425px;
+  object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
