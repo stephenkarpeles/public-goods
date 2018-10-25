@@ -1,12 +1,12 @@
 .site-branding {
 	position: relative;
+	padding: 2.35rem 0;
 	width: $container-width;
 	max-width: $container-max-width;
 	margin: 0 auto;
 	background: url('../img/banner-header.jpg') no-repeat;
 	background-size: cover;
 	background-position: center center;
-	height: 150px;
 	text-align: center;
 	color: white;
 	display: flex;
@@ -36,7 +36,8 @@
 	}
 }
 
-.site-description {
+.site-description,
+.site-title {
 	padding: 0 1rem;
 }
 
@@ -73,6 +74,7 @@
 	cursor: pointer;
 	border: none;
 	padding: 15px 0;
+	background: transparent;
 
 	@include hover-anim-1;	
 

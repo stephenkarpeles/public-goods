@@ -31,6 +31,8 @@
   margin-bottom: 0; }
 
 *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -93,6 +95,62 @@ h2 {
   font-size: 2rem;
   line-height: 1.2; }
 
+.drip-form--sidebar {
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  background: #efefef;
+  font-size: 1rem; }
+  .drip-form--sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+  .drip-form--sidebar label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  .drip-form--sidebar input[type='email'] {
+    border: 2px solid black;
+    border-right: none;
+    padding: 0 10px 0 15px;
+    height: 34px;
+    background: transparent;
+    font-size: 13px;
+    max-width: 125px; }
+    .drip-form--sidebar input[type='email']::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: black; }
+    .drip-form--sidebar input[type='email']::-moz-placeholder {
+      /* Firefox 19+ */
+      color: black; }
+    .drip-form--sidebar input[type='email']:-ms-input-placeholder {
+      /* IE 10+ */
+      color: black; }
+    .drip-form--sidebar input[type='email']:-moz-placeholder {
+      /* Firefox 18- */
+      color: black; }
+  .drip-form--sidebar input[type='submit'] {
+    border: none;
+    background: black;
+    height: 38px;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100px;
+    transition: all .15s ease; }
+    .drip-form--sidebar input[type='submit']:hover, .drip-form--sidebar input[type='submit']:focus {
+      opacity: .6; }
+  .drip-form--sidebar .input-wrap {
+    margin-top: 1.125rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; }
+
 .site-content {
   width: 90%;
   max-width: 1100px;
@@ -100,13 +158,13 @@ h2 {
 
 .site-branding {
   position: relative;
+  padding: 2.35rem 0;
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   background: url("../img/banner-header.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 150px;
   text-align: center;
   color: white;
   display: flex;
@@ -126,7 +184,8 @@ h2 {
     .site-branding {
       margin-bottom: 2.5rem; } }
 
-.site-description {
+.site-description,
+.site-title {
   padding: 0 1rem; }
 
 .custom-logo-link img {
@@ -155,6 +214,7 @@ h2 {
   cursor: pointer;
   border: none;
   padding: 15px 0;
+  background: transparent;
   transition: all .15s ease; }
   .menu-toggle:hover, .menu-toggle:focus {
     opacity: .6; }
@@ -247,12 +307,12 @@ h2 {
   display: flex;
   justify-content: space-between; }
   .blog .site-content #primary {
-    width: 70%; }
+    width: 67%; }
     @media screen and (max-width: 767px) {
       .blog .site-content #primary {
         width: 100%; } }
   .blog .site-content #secondary {
-    width: 25%; }
+    width: 28%; }
     @media screen and (max-width: 767px) {
       .blog .site-content #secondary {
         display: none; } }
