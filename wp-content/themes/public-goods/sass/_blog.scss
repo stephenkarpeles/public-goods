@@ -3,10 +3,14 @@
 		display: flex;
 		justify-content: space-between;
 
+		@include mq(desktop, 'max-width') {
+			flex-direction: column;
+		}
+
 		#primary {
 			width: 67%;
 
-			@include mq(ipad, 'max-width') {
+			@include mq(desktop, 'max-width') {
 				width: 100%;
 			}
 		}
@@ -14,8 +18,8 @@
 		#secondary {
 			width: 28%;
 
-			@include mq(ipad, 'max-width') {
-				display: none;
+			@include mq(desktop, 'max-width') {
+				width: 100%;
 			}
 		}
 	}
@@ -80,6 +84,10 @@
     .entry-image {
     	width: 48%;
 
+    	@include mq(desktop, 'max-width') {
+    		margin-right: 2rem;
+    	}
+
     	&--mobile {
     		display: none;
     	}
@@ -87,6 +95,10 @@
 
     .entry-content {
     	width: 48%;
+    }
+
+    @include mq(desktop, 'max-width') {
+    	justify-content: flex-start;
     }
 
     @include mq(ipad, 'max-width') {
