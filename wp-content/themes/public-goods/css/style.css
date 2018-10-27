@@ -154,7 +154,8 @@ h2 {
     flex-direction: row;
     align-items: center; }
 
-.site-content {
+.site-content,
+.container {
   width: 90%;
   max-width: 1120px;
   margin: 0 auto; }
@@ -305,6 +306,102 @@ h2 {
   @media screen and (max-width: 767px) {
     .mobile-cart-link {
       display: block; } }
+
+.site-footer {
+  margin-top: 1rem;
+  padding: 3rem 0 2rem;
+  background: black;
+  color: white;
+  font-size: .875rem; }
+  .site-footer ul {
+    padding: 0;
+    margin: 0; }
+  .site-footer a {
+    color: white; }
+  .site-footer .container {
+    display: flex;
+    justify-content: space-between; }
+  .site-footer__subscribe-block {
+    padding-bottom: 1.5rem; }
+    .site-footer__subscribe-block h3 {
+      margin-bottom: 1.25rem; }
+    .site-footer__subscribe-block .input-wrap {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1.5rem; }
+    .site-footer__subscribe-block input[type='email'] {
+      border: 2px solid white;
+      border-right: none;
+      padding: 0 10px 0 15px;
+      height: 34px;
+      background: transparent;
+      font-size: 12px;
+      width: 250px;
+      max-width: 50%;
+      color: white; }
+      .site-footer__subscribe-block input[type='email']::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: white; }
+      .site-footer__subscribe-block input[type='email']::-moz-placeholder {
+        /* Firefox 19+ */
+        color: white; }
+      .site-footer__subscribe-block input[type='email']:-ms-input-placeholder {
+        /* IE 10+ */
+        color: white; }
+      .site-footer__subscribe-block input[type='email']:-moz-placeholder {
+        /* Firefox 18- */
+        color: white; }
+    .site-footer__subscribe-block input[type='submit'] {
+      border: none;
+      background: white;
+      height: 38px;
+      font-size: 12px;
+      color: black;
+      cursor: pointer;
+      font-weight: 700;
+      width: 100px;
+      transition: all .15s ease; }
+      .site-footer__subscribe-block input[type='submit']:hover {
+        opacity: .9; }
+  .site-footer__subscribe-disclaimer {
+    font-size: 11px;
+    max-width: 220px; }
+  .site-footer__nav-menu li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 3rem; }
+    .site-footer__nav-menu li:last-child {
+      margin-right: 0; }
+  .site-footer__nav-menu a {
+    font-size: .8rem;
+    color: #aaaaaa; }
+  @media screen and (max-width: 1023px) {
+    .site-footer__nav-menu li {
+      margin-right: 2rem; } }
+  @media screen and (max-width: 859px) {
+    .site-footer__nav-menu li {
+      margin-right: 1.5rem; } }
+  .site-footer__right-block {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end; }
+  .site-footer__social-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem; }
+  .site-footer__social-nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 1rem; }
+    .site-footer__social-nav li:first-child {
+      margin-left: 0; }
+  .site-footer__social-nav a {
+    color: white;
+    font-size: 1.5rem; }
+  .site-footer__copyright {
+    font-size: .8rem;
+    color: #aaaaaa; }
 
 .idea-block {
   padding: 1.75rem 1.25rem;
