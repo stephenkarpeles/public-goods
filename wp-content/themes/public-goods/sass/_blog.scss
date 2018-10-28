@@ -20,6 +20,7 @@
 
 			@include mq(desktop, 'max-width') {
 				width: 100%;
+				margin-top: 4rem;
 			}
 		}
 	}
@@ -126,5 +127,63 @@
     		width: 100%;
     	}
     }
+	}
+
+	.posts-navigation {
+		max-width: $container-max-width;
+		width: $container-width;
+		margin: 1rem auto 0;
+		position: absolute;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+
+		a {
+			color: $text-color-light;
+			transiton: all .15s ease;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+		.nav-links {
+			display: flex;
+		}
+
+		.nav-next, 
+		.nav-previous {
+			display: flex;
+		}
+
+		.nav-previous {
+			order: 2;
+			margin-left: .5rem;
+
+			&:after {
+				content: '\2192';
+				position: relative;
+				color: $text-color-light;
+				margin-left: 5px;
+			}
+		}
+
+		.nav-next {
+			order: 1;
+
+			&:before {
+				content: '\2190';
+				position: relative;
+				color: $text-color-light;
+				margin-right: 5px;
+			}
+
+			&:after {
+				content: '|';
+				position: relative;
+				color: $text-color-light;
+				margin-left: .5rem;
+			}
+		}
 	}
 }
