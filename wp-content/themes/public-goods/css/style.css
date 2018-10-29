@@ -326,6 +326,9 @@ h2 {
   .site-footer .container {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 859px) {
+      .site-footer .container {
+        flex-direction: column; } }
   .site-footer__subscribe-block {
     padding-bottom: 1.5rem; }
     .site-footer__subscribe-block h3 {
@@ -368,9 +371,16 @@ h2 {
       transition: all .15s ease; }
       .site-footer__subscribe-block input[type='submit']:hover {
         opacity: .9; }
+    @media screen and (max-width: 859px) {
+      .site-footer__subscribe-block .input-wrap {
+        justify-content: center; } }
   .site-footer__subscribe-disclaimer {
     font-size: 11px;
+    line-height: 17px;
     max-width: 220px; }
+    @media screen and (max-width: 859px) {
+      .site-footer__subscribe-disclaimer {
+        max-width: none; } }
   .site-footer__nav-menu li {
     display: inline-block;
     list-style-type: none;
@@ -386,15 +396,34 @@ h2 {
   @media screen and (max-width: 859px) {
     .site-footer__nav-menu li {
       margin-right: 1.5rem; } }
+  @media screen and (max-width: 639px) {
+    .site-footer__nav-menu li {
+      margin-right: 1.15rem; }
+    .site-footer__nav-menu a {
+      font-size: .75rem; } }
+  @media screen and (max-width: 859px) {
+    .site-footer__left-block {
+      text-align: center; } }
   .site-footer__right-block {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     justify-content: flex-end; }
+    @media screen and (max-width: 859px) {
+      .site-footer__right-block {
+        margin-top: 2.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: normal; } }
   .site-footer__social-nav ul {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2rem; }
+    @media screen and (max-width: 859px) {
+      .site-footer__social-nav ul {
+        margin-bottom: 1rem;
+        text-align: center;
+        justify-content: center; } }
   .site-footer__social-nav li {
     display: inline-block;
     list-style-type: none;
@@ -403,7 +432,10 @@ h2 {
       margin-left: 0; }
   .site-footer__social-nav a {
     color: white;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    transition: all .15s ease; }
+    .site-footer__social-nav a:hover, .site-footer__social-nav a:focus {
+      opacity: .6; }
   .site-footer__copyright {
     font-size: .8rem;
     color: #aaaaaa; }
