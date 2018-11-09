@@ -2,6 +2,7 @@
 	.site-content {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 
 		@include mq(desktop, 'max-width') {
 			flex-direction: column;

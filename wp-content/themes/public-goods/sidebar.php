@@ -8,7 +8,7 @@
  */
 ?>
 
-<aside id="secondary" class="widget-area">
+<aside id="secondary" class="widget-area sidebar">
 
 	<!-- Drip Newsletter Form -->
 	<form action="https://www.getdrip.com/forms/263175359/submissions" method="post" data-drip-embedded-form="263175359" class="drip-form--sidebar">

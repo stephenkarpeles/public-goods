@@ -4,3 +4,8 @@
 	max-width: $container-max-width;
 	margin: 0 auto;
 }
+
+.sidebar {
+	position: sticky;
+	top: 1rem;
+}

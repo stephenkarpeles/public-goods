@@ -163,6 +163,10 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
+.sidebar {
+  position: sticky;
+  top: 1rem; }
+
 .site-branding {
   position: relative;
   padding: 2.35rem 0;
@@ -508,7 +512,8 @@ h2 {
 
 .blog .site-content {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: flex-start; }
   @media screen and (max-width: 1023px) {
     .blog .site-content {
       flex-direction: column; } }
