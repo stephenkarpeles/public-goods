@@ -59,6 +59,17 @@
 
 		</div>
 	</footer><!-- #colophon -->
+
+	<!-- Modal -->
+	<div class="modal">
+	  <div class="modal__content">
+	    <div class="modal__close"><span>x</span></div>
+	      <div class="modal__interior is-open">
+	        <p>Content here</p> 
+	    </div>
+	  </div>
+	</div>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

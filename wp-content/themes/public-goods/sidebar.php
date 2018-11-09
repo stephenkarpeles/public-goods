@@ -29,7 +29,7 @@
 		<p class="idea-block__text">
 			Submit your ideas to our blog and get $100 if we publish your article.
 		</p>
-		<button class="idea-block__submit-button">
+		<button class="idea-block__submit-button modal__trigger">
 			Submit
 		</button>	
 	</div>

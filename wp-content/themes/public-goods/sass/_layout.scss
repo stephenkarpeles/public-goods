@@ -8,4 +8,9 @@
 .sidebar {
 	position: sticky;
 	top: 1rem;
+
+	@include mq(ipad, 'max-width') {
+		position: relative;
+		top: 0;
+	}
 }
