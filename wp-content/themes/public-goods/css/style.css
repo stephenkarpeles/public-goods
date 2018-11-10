@@ -157,6 +157,49 @@ h2 {
     flex-direction: row;
     align-items: center; }
 
+.idea-form label,
+.idea-form p,
+.idea-form button, .idea-form__intro-text {
+  font-family: "NeuzeitBook", Helvetica, Arial, sans-serif !important;
+  color: black !important; }
+.idea-form__intro-text {
+  font-size: 18px;
+  margin-bottom: 2.25rem;
+  color: black !important; }
+.idea-form label {
+  font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif !important;
+  color: black !important; }
+.idea-form__intro-block {
+  text-align: center;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto; }
+.idea-form__heading {
+  font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif !important;
+  color: black !important;
+  margin-bottom: 1.5rem !important; }
+.idea-form input[type="text"],
+.idea-form input[type="email"],
+.idea-form textarea {
+  min-height: 44px;
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+  font-family: "NeuzeitBook", Helvetica, Arial, sans-serif !important; }
+.idea-form .frm_submit {
+  text-align: center; }
+.idea-form button.frm_button_submit {
+  background: #db886c !important;
+  border-radius: 0 !important;
+  color: white !important;
+  border: none !important;
+  padding: .95em 3.25em .8em !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif !important;
+  transition: all ease .15s; }
+  .idea-form button.frm_button_submit:hover {
+    opacity: .9; }
+
 .site-content,
 .container {
   width: 90%;
@@ -539,24 +582,25 @@ h2 {
     text-align: center;
     text-decoration: none; }
   .modal__close {
+    font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
     position: absolute;
     cursor: pointer;
-    top: -.75em;
-    right: -.75em;
-    background: red;
+    top: 15px;
+    right: 35px;
     color: white;
-    border-radius: 50%;
-    font-weight: 900;
-    height: 2em;
-    width: 2em;
+    font-weight: 300;
     text-align: center;
-    line-height: 2em;
-    /* equal to height */ }
+    font-size: 50px;
+    color: black;
+    transition: all ease .15s; }
+    .modal__close:hover {
+      opacity: .7; }
   .modal__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 720px;
     max-width: 80vw;
     z-index: 9000;
     background: white;

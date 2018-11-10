@@ -28,18 +28,21 @@
   }
   
   &__close {
+    font-family: $sans-serif-main;
     position: absolute;
     cursor: pointer;
-    top: -.75em;
-    right: -.75em;
-    background: red;
+    top: 15px;
+    right: 35px;
     color: white;
-    border-radius: 50%;
-    font-weight: 900;
-    height: 2em;
-    width: 2em;  
+    font-weight: 300;
     text-align: center;
-    line-height: 2em; /* equal to height */
+    font-size: 50px;
+    color: black;
+    transition: all ease .15s;
+
+    &:hover {
+      opacity: .7;
+    }
   }
   
   &__content {
@@ -47,6 +50,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 720px;
     max-width: 80vw;
     z-index: 9000;
     background: white;

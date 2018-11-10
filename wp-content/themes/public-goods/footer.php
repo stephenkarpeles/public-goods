@@ -63,9 +63,10 @@
 	<!-- Modal -->
 	<div class="modal">
 	  <div class="modal__content">
-	    <div class="modal__close"><span>x</span></div>
-	      <div class="modal__interior is-open">
-	        <p>Content here</p> 
+	    <div class="modal__close"><span>&times;</span></div>
+	    <div class="modal__interior is-open">
+	    	<!-- Idea Submission Form -->
+	      <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 3, 'title' => false, 'description' => false ) ); ?>
 	    </div>
 	  </div>
 	</div>
