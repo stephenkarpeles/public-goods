@@ -1,11 +1,69 @@
 .single {
+	.site-branding {
+		display: none;
+	}
+  .site-content {
+  	margin-top: 2rem;
+  	max-width: $container-small-max-width;
+  }
+
 	h1.entry-title {
     margin-bottom: 1rem;
+	}
+
+	p {
+		line-height: 1.5;
+	}
+
+	blockquote {
+		float: left;
+		width: 40%;
+		padding-right: 10%;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin: 0 0 1.25rem;
+		font-size: 2.25rem;
+	  line-height: 1.2;
+	  font-weight: 700;
+	  font-family: $sans-serif-heavy;
+	  margin-bottom: 0;
+
+	  p {
+	  	padding: 0;
+	  	line-height: 1.2;
+	  	margin-bottom: 0;
+	  }
 	}
 
 	.entry-meta {
 		color: $text-color-light;
 		margin-bottom: 1rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		&__author-image {
+			margin-right: 1.5rem;
+
+			img { 
+				border-radius: 50%;
+				height: 72px;
+				width: 72px;
+			}
+		}
+
+		&__post-info {
+			font-size: .9rem;
+		}
+
+		&__author-name {
+			margin-bottom: .25rem;
+			color: $text-color-main;
+		}
+
+		&__post-date {
+			color: $text-color-light;
+		}
 	}
 
 	.entry-intro {

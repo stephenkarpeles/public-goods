@@ -23,15 +23,16 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					by <?php the_author(); ?><br>
-					<?php the_date('F j, Y'); ?>
+					<div class="entry-meta__author-image">
+						<?php echo get_avatar( get_the_author_meta( 'ID' )); ?>
+					</div>
+					<div class="entry-meta__post-info">
+						<div class="entry-meta__author-name">by <?php the_author(); ?></div>
+						<div class="entry-meta__post-date"><?php the_date('F j, Y'); ?></div>
+					</div>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
-
-		<div class="entry-intro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum posuere. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Aliquam ut porttitor leo a diam sollicitudin tempor. Dui accumsan sit amet nulla facilisi morbi. Sed enim ut sem viverra aliquet eget sit. In fermentum posuere urna nec.</p>
-		</div>
 
 		<div class="entry-main-content">
 			<?php the_content(); ?>

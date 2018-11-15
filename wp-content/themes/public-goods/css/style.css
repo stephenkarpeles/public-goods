@@ -72,6 +72,7 @@ em {
   font-style: italic; }
 
 p {
+  line-height: 1.375;
   margin-bottom: 1.25rem; }
 
 h1,
@@ -736,11 +737,50 @@ h2 {
       color: #aaaaaa;
       margin-left: .5rem; }
 
+.single .site-branding {
+  display: none; }
+.single .site-content {
+  margin-top: 2rem;
+  max-width: 840px; }
 .single h1.entry-title {
   margin-bottom: 1rem; }
+.single p {
+  line-height: 1.5; }
+.single blockquote {
+  float: left;
+  width: 40%;
+  padding-right: 10%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 0 1.25rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
+  margin-bottom: 0; }
+  .single blockquote p {
+    padding: 0;
+    line-height: 1.2;
+    margin-bottom: 0; }
 .single .entry-meta {
   color: #aaaaaa;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .single .entry-meta__author-image {
+    margin-right: 1.5rem; }
+    .single .entry-meta__author-image img {
+      border-radius: 50%;
+      height: 72px;
+      width: 72px; }
+  .single .entry-meta__post-info {
+    font-size: .9rem; }
+  .single .entry-meta__author-name {
+    margin-bottom: .25rem;
+    color: #000000; }
+  .single .entry-meta__post-date {
+    color: #aaaaaa; }
 .single .entry-intro p {
   padding-bottom: 1rem; }
 .single .entry-image img {
