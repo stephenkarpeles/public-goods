@@ -47,9 +47,9 @@
 				</h2>
 			<?php endif; ?>
 
-			<?php if( get_field('blurb') ): ?>
+			<?php if( get_field('short_blurb') ): ?>
 				<p class="lead-magnet-block__blurb">
-					<?php the_field('blurb'); ?>
+					<?php the_field('short_blurb'); ?>
 				</p>
 			<?php endif; ?>
 
