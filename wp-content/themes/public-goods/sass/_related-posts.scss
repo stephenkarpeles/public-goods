@@ -1,14 +1,18 @@
 .related-posts {
-	margin: 4rem 0;
+	margin: 4.5rem 0;
 
 	&__heading {
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 3.5rem;
 	}
 
 	&__post-loop {
 		display: flex;
 	  justify-content: space-between;
+
+	  @include mq(mobile-landscape, 'max-width') {
+	  	flex-direction: column;
+	  }
 	}
 
 	&__read-more {
@@ -21,6 +25,20 @@
 		width: 30%;
 		text-align: center;
 		color: $text-color-main;
+		margin-bottom: 0;
+
+		@include mq(ipad, 'max-width') {
+			width: 47%;
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		@include mq(mobile-landscape, 'max-width') {
+			width: 100%;
+			margin-bottom: 3.5rem;
+		}
 
 		a {
 			color: $text-color-main;

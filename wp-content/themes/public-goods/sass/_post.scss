@@ -42,6 +42,25 @@
 	  font-family: $sans-serif-heavy;
 	  margin-bottom: 0;
 
+	  @include mq(desktop-narrow, 'max-width') {
+      font-size: 1.85rem;
+      padding-right: 60px;
+	  }
+
+	  @include mq(ipad, 'max-width') {
+      font-size: 1.75rem;
+      padding-right: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+	  }
+
+	  @include mq(tablet, 'max-width') {
+			width: 100%;
+			padding-right: 0;
+			padding-top: 35px;
+      padding-bottom: 35px;
+	  }
+
 	  p {
 	  	padding: 0;
 	  	line-height: 1.2;
