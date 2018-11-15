@@ -30,7 +30,9 @@
 .no-bottom-margin {
   margin-bottom: 0; }
 
-*:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -558,6 +560,43 @@ h2 {
     .featured-block a:hover, .featured-block a:focus {
       opacity: .6; }
 
+.lead-magnet-block {
+  text-align: center;
+  background-color: #db886c;
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px 40px; }
+  .lead-magnet-block__headline {
+    margin-bottom: 1rem; }
+  .lead-magnet-block__blurb {
+    max-width: 400px;
+    margin-bottom: 2rem; }
+  .lead-magnet-block__button {
+    background: white;
+    border: none;
+    border-radius: 0;
+    color: #db886c;
+    padding: .75em 2em .65em;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 700;
+    font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
+    transition: all .15s ease; }
+    .lead-magnet-block__button:hover {
+      opacity: .9; }
+  .lead-magnet-block--has-background-img .lead-magnet-block__button {
+    color: #000000; }
+
 .modal {
   display: none;
   overflow: hidden;
@@ -756,8 +795,8 @@ h2 {
   line-height: 1.6; }
 .single blockquote {
   float: left;
-  width: 40%;
-  padding-right: 10%;
+  width: 50%;
+  padding-right: 80px;
   padding-top: 80px;
   padding-bottom: 80px;
   margin: 0 0 1.25rem;

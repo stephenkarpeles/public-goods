@@ -32,10 +32,35 @@
 					</div>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
-		</header><!-- .entry-header -->
+		</header><!-- .entry-header -->		
 
 		<div class="entry-main-content">
 			<?php the_content(); ?>
+		</div>
+
+		<!-- Lead Magnet Custom Fields -->
+		<div class="lead-magnet-block<?php if( get_field('background_image') ): ?> lead-magnet-block--has-background-img<?php endif; ?>" <?php if( get_field('background_image') ): ?>style="background-image: url('<?php the_field('background_image'); ?>');"<?php endif; ?>>
+
+			<?php if( get_field('headline') ): ?>
+				<h2 class="lead-magnet-block__headline">
+					<?php the_field('headline'); ?>
+				</h2>
+			<?php endif; ?>
+
+			<?php if( get_field('blurb') ): ?>
+				<p class="lead-magnet-block__blurb">
+					<?php the_field('blurb'); ?>
+				</p>
+			<?php endif; ?>
+
+			<?php if( get_field('button_link') ): ?>
+				<a class="btn lead-magnet-block__button" href="<?php the_field('button_link'); ?>">
+					<?php if( get_field('button_text') ): ?>
+				    <?php the_field('button_text'); ?>
+			    <?php endif; ?>
+				</a>
+			<?php endif; ?>			
+
 		</div>
 
 		<div class="entry-more-link">

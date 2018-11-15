@@ -1,0 +1,51 @@
+.lead-magnet-block {
+	$self: &;
+
+	text-align: center;
+	background-color: $secondary-color;
+	background-size: cover;
+	background-position: bottom center;
+	width: 100%;
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 20px 40px;
+
+	&__headline {
+		margin-bottom: 1rem;
+	}
+
+	&__blurb {
+		max-width: 400px;
+		margin-bottom: 2rem;
+	}
+
+	&__button {
+		background: white;
+		border: none;
+		border-radius: 0;
+		color: $secondary-color;
+		padding: .75em 2em .65em; 
+		display: inline-block;
+		margin: 0 auto;
+		font-weight: 700;
+		cursor: pointer;
+		font-size: .875rem;
+		font-weight: 700;
+		font-family: $sans-serif-heavy;
+		transition: all .15s ease;
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+
+	&--has-background-img {
+    #{$self}__button {
+    	color: $text-color-main;
+    }
+	}
+}
