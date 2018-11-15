@@ -6,8 +6,10 @@
 }
 
 .sidebar {
-	position: sticky;
-	top: 1rem;
+	@media screen and ( min-height: 840px ) {
+	  position: sticky;
+	  top: 1rem;
+	}
 
 	@include mq(ipad, 'max-width') {
 		position: relative;

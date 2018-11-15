@@ -209,13 +209,14 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
-.sidebar {
-  position: sticky;
-  top: 1rem; }
-  @media screen and (max-width: 767px) {
-    .sidebar {
-      position: relative;
-      top: 0; } }
+@media screen and (min-height: 840px) {
+  .sidebar {
+    position: sticky;
+    top: 1rem; } }
+@media screen and (max-width: 767px) {
+  .sidebar {
+    position: relative;
+    top: 0; } }
 
 .site-branding {
   position: relative;
@@ -571,6 +572,9 @@ h2 {
   font-weight: 400;
   margin-bottom: 1rem; }
 
+.comment-form-url {
+  display: none; }
+
 .comment-form {
   margin-bottom: 4.5rem; }
   .comment-form label {
@@ -856,8 +860,14 @@ h2 {
 .blog .entry-meta {
   color: #aaaaaa;
   font-size: .85rem;
-  margin-bottom: .75em; }
+  margin-bottom: .75rem;
+  margin-top: .75rem; }
   .blog .entry-meta a {
+    color: #aaaaaa; }
+  .blog .entry-meta__author {
+    color: #000000;
+    margin-bottom: .1rem; }
+  .blog .entry-meta__date {
     color: #aaaaaa; }
 .blog .entry-excerpt {
   line-height: 1.5;

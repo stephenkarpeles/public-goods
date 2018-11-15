@@ -57,10 +57,20 @@
 	.entry-meta {
 		color: $text-color-light;
 		font-size: .85rem;
-		margin-bottom: .75em;
+		margin-bottom: .75rem;
+		margin-top: .75rem;
 
 		a {
       color: $text-color-light;			
+		}
+
+		&__author {
+			color: $text-color-main;
+			margin-bottom: .1rem;
+		}
+
+		&__date {
+			color: $text-color-light;
 		}
 	}
 
