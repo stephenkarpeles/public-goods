@@ -20,13 +20,13 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments comments-area">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments__title">
 			<?php
 			  echo 'Comments ('. get_comments_number() . ')';
 			?>
@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ul class="comment-list">
+		<ul class="comments__list">
 			<?php
 			wp_list_comments( array(
 				'style'      => 'ul',

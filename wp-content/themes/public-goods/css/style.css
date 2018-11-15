@@ -494,6 +494,121 @@ h2 {
     font-size: .8rem;
     color: #aaaaaa; }
 
+.comments__title {
+  padding-top: 2rem;
+  border-top: 1px solid black;
+  font-family: "BebasNeue", Georgia, sans-serif;
+  font-size: 1.65rem;
+  text-transform: uppercase;
+  font-weight: 400; }
+.comments__list {
+  margin: 0;
+  padding: 0; }
+  .comments__list img.avatar {
+    float: left;
+    border-radius: 50%;
+    height: 72px;
+    width: 72px;
+    margin-right: 1.5rem;
+    position: absolute;
+    left: 0; }
+    @media screen and (max-width: 639px) {
+      .comments__list img.avatar {
+        height: 50px;
+        width: 50px;
+        margin-right: 1rem; } }
+  .comments__list a {
+    color: #000000;
+    text-decoration: underline; }
+  .comments__list ul.children {
+    padding-top: 2rem; }
+    .comments__list ul.children li:last-child {
+      padding-bottom: 0; }
+  .comments__list li {
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
+    position: relative; }
+    .comments__list li:first-child {
+      padding: 1rem 0 2rem; }
+    .comments__list li:last-child {
+      border-bottom: none; }
+  .comments__list .says {
+    display: none; }
+
+.comment-content,
+.comment-metadata,
+.comment-author .fn,
+.comments .reply {
+  /* Accounts for absolute positioned image */
+  margin-left: 6rem; }
+  @media screen and (max-width: 639px) {
+    .comment-content,
+    .comment-metadata,
+    .comment-author .fn,
+    .comments .reply {
+      margin-left: 4.25rem; } }
+
+.comment-content {
+  padding-top: 1rem; }
+
+.comment-metadata {
+  font-size: .875rem;
+  color: #aaaaaa; }
+  .comment-metadata a {
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: none;
+    pointer-events: none; }
+
+.comment-respond {
+  padding-top: 2rem; }
+
+.comment-reply-title {
+  font-family: "BebasNeue", Georgia, sans-serif;
+  font-size: 1.65rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1rem; }
+
+.comment-form {
+  margin-bottom: 4.5rem; }
+  .comment-form label {
+    display: block;
+    width: 100%;
+    font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
+    margin-bottom: .25rem; }
+  .comment-form input:not([type="submit"]),
+  .comment-form textarea {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: none; }
+  .comment-form input:not([type="submit"]),
+  .comment-form input:not([type="radio"]),
+  .comment-form input:not([type="checkbox"]) {
+    height: 40px;
+    font-size: 1rem;
+    padding: .75rem; }
+  .comment-form textarea {
+    font-size: 1rem;
+    padding: .75rem; }
+  .comment-form input[type="submit"] {
+    background: #db886c;
+    border: none;
+    border-radius: 0;
+    color: white;
+    padding: .85em 1.75em .65em;
+    display: inline-block;
+    margin: .45rem auto 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 700;
+    font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
+    transition: all .15s ease; }
+    .comment-form input[type="submit"]:hover {
+      opacity: .9; }
+
 .idea-block {
   padding: 1.75rem 1.25rem;
   margin-top: 1rem;

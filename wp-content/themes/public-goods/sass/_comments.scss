@@ -1,0 +1,155 @@
+.comments {
+	&__title {
+		padding-top: 2rem;
+		border-top: 1px solid black;
+		font-family: $sans-serif-alt;
+		font-size: 1.65rem;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+
+		img.avatar {
+			float: left;
+			border-radius: 50%;
+			height: 72px;
+			width: 72px;
+			margin-right: 1.5rem;
+			position: absolute;
+			left: 0;
+
+			@include mq(tablet, 'max-width') {
+				height: 50px;
+				width: 50px;
+				margin-right: 1rem;
+			}
+		}
+
+		a {
+			color: $text-color-main;
+			text-decoration: underline;
+		}
+
+		ul.children {
+			padding-top: 2rem;
+
+			li:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		li {
+			list-style-type: none;
+			border-bottom: 1px solid black;
+			padding: 2rem 0;
+			position: relative;
+
+			&:first-child {
+				padding: 1rem 0 2rem;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.says {
+			display: none;
+		}
+	}
+}
+
+.comment-content,
+.comment-metadata,
+.comment-author .fn,
+.comments .reply {
+	/* Accounts for absolute positioned image */
+	margin-left: 6rem;
+
+	@include mq(tablet, 'max-width') {
+		margin-left: 4.25rem;
+	}
+} 
+
+.comment-content {
+	padding-top: 1rem;
+}
+
+.comment-metadata {
+	font-size: .875rem;
+	color: $text-color-light;
+
+	a {
+		color: $text-color-light;
+		text-decoration: none;
+		cursor: none;
+		pointer-events: none;
+	}
+}
+
+.comment-respond {
+	padding-top: 2rem;
+}
+
+.comment-reply-title {
+	font-family: $sans-serif-alt;
+	font-size: 1.65rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+
+.comment-form {
+	margin-bottom: 4.5rem;
+
+	label {
+		display: block;
+		width: 100%;
+		font-family: $sans-serif-heavy;
+		margin-bottom: .25rem;
+	}
+
+	input:not([type="submit"]),
+	textarea {
+		width: 100%;
+		border: 1px solid black;
+		border-radius: none;
+	}
+
+	input:not([type="submit"]),
+	input:not([type="radio"]),
+	input:not([type="checkbox"]) {
+    height: 40px;
+    font-size: 1rem;
+    padding: .75rem;
+	}
+
+	textarea {
+		font-size: 1rem;
+    padding: .75rem;
+	}
+
+	input[type="submit"] {
+		background: $secondary-color;
+		border: none;
+		border-radius: 0;
+		color: white;
+		padding: .85em 1.75em .65em; 
+		display: inline-block;
+		margin: .45rem auto 0;
+		font-weight: 700;
+		cursor: pointer;
+		font-size: .875rem;
+		font-weight: 700;
+		font-family: $sans-serif-heavy;
+		transition: all .15s ease;
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+}
