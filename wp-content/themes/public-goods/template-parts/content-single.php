@@ -92,9 +92,9 @@
 			 
 		</div>
 
-		<div class="entry-more-link">
+		<!-- <div class="entry-more-link">
 			<a href="<?php echo get_permalink();?>">Read More</a>
-		</div>
+		</div> -->
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
