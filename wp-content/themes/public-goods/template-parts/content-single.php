@@ -59,8 +59,37 @@
 				    <?php the_field('button_text'); ?>
 			    <?php endif; ?>
 				</a>
-			<?php endif; ?>			
+			<?php endif; ?>	
+		</div>
 
+		<!-- Recent Posts -->
+	  <div class="related-posts">
+
+	  	<h2 class="related-posts__heading">More from the blog.</h2>
+
+	  	<div class="related-posts__post-loop">
+	  	
+		    <?php
+	        global $post;
+	        $current_post = $post;
+
+	        for($i = 1; $i <= 3; $i++):
+	        $post = get_previous_post();
+	        setup_postdata($post);
+
+	        echo '<div class="related-posts__post">';
+	        echo public_goods_post_thumbnail();
+	        echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
+	        echo '<p>' . wp_trim_words( get_the_content(), 10, '.' ) . '</p>';
+	        echo '<a class="related-posts__read-more" href="' . get_permalink() . '">Read More</a>';
+	        echo '</div> ';
+
+	        endfor;
+	        $post = $current_post; 
+			  ?>
+
+			 </div>
+			 
 		</div>
 
 		<div class="entry-more-link">

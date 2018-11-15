@@ -652,6 +652,41 @@ h2 {
     .modal__interior.is-open {
       display: block; }
 
+.related-posts {
+  margin: 4rem 0; }
+  .related-posts__heading {
+    text-align: center;
+    margin-bottom: 3rem; }
+  .related-posts__post-loop {
+    display: flex;
+    justify-content: space-between; }
+  .related-posts__read-more {
+    text-decoration: underline;
+    transition: all .15s ease; }
+    .related-posts__read-more:hover, .related-posts__read-more:focus {
+      opacity: .6; }
+  .related-posts__post {
+    width: 30%;
+    text-align: center;
+    color: #000000; }
+    .related-posts__post a {
+      color: #000000;
+      transition: all .15s ease; }
+      .related-posts__post a:hover, .related-posts__post a:focus {
+        opacity: .6; }
+    .related-posts__post h3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .related-posts__post p {
+      line-height: 1.4 !important; }
+    .related-posts__post .post-thumbnail {
+      margin-bottom: 2rem; }
+      .related-posts__post .post-thumbnail img {
+        height: 360px;
+        width: 100%;
+        object-fit: cover; }
+
 .blog .site-content {
   display: flex;
   justify-content: space-between;

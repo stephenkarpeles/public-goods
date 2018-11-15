@@ -1,0 +1,51 @@
+.related-posts {
+	margin: 4rem 0;
+
+	&__heading {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	&__post-loop {
+		display: flex;
+	  justify-content: space-between;
+	}
+
+	&__read-more {
+	  text-decoration: underline;
+
+	  @include hover-anim-1;
+	}
+
+	&__post {
+		width: 30%;
+		text-align: center;
+		color: $text-color-main;
+
+		a {
+			color: $text-color-main;
+
+			@include hover-anim-1;
+		}
+
+		h3 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		p {
+			line-height: 1.4 !important;
+		}
+
+		.post-thumbnail {
+			margin-bottom: 2rem;
+
+			img {
+				height: 360px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
