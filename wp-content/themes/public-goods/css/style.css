@@ -73,7 +73,7 @@ em {
 
 p {
   line-height: 1.375;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.5rem; }
 
 h1,
 h2,
@@ -742,10 +742,18 @@ h2 {
 .single .site-content {
   margin-top: 2rem;
   max-width: 840px; }
+.single .entry-main-content img {
+  height: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
+.single .entry-main-content ol,
+.single .entry-main-content ul {
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
 .single h1.entry-title {
   margin-bottom: 1rem; }
 .single p {
-  line-height: 1.5; }
+  line-height: 1.6; }
 .single blockquote {
   float: left;
   width: 40%;
@@ -754,7 +762,7 @@ h2 {
   padding-bottom: 80px;
   margin: 0 0 1.25rem;
   font-size: 2.25rem;
-  line-height: 1.2;
+  line-height: 1.25;
   font-weight: 700;
   font-family: "NeuzeitBookHeavy", Helvetica, Arial, sans-serif;
   margin-bottom: 0; }
