@@ -816,8 +816,10 @@ h2 {
     .related-posts__post .post-thumbnail {
       margin-bottom: 2rem; }
       .related-posts__post .post-thumbnail img {
-        height: 360px;
-        width: 100%;
+        margin: 0 auto;
+        height: 255px;
+        width: 255px;
+        max-width: 100%;
         object-fit: cover; }
 
 .blog .site-content {
