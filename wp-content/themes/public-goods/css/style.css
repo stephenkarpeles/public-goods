@@ -209,14 +209,13 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
-@media screen and (min-height: 840px) {
-  .sidebar {
-    position: sticky;
-    top: 1rem; } }
-@media screen and (max-width: 767px) {
-  .sidebar {
-    position: relative;
-    top: 0; } }
+.sidebar {
+  position: sticky;
+  top: 1rem; }
+  @media screen and (max-width: 767px) {
+    .sidebar {
+      position: relative;
+      top: 0; } }
 
 .site-branding {
   position: relative;
