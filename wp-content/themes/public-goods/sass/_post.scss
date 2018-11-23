@@ -2,9 +2,22 @@
 	.site-branding {
 		display: none;
 	}
+
   .site-content {
-  	margin-top: 2rem;
+  	margin-top: calc(2rem + 87px); // add header height
   	max-width: $container-small-max-width;
+
+  	@include mq(ipad, 'max-width') {
+  		margin-top: calc(1.5rem + 72px); // add header height
+  	}
+  }
+
+  &.logged-in {
+  	.site-content {
+  		@include mq(wp-bar-switch, 'max-width') {
+  		  margin-top: 3rem;
+  	  }
+  	}
   }
 
   .entry-main-content {
@@ -112,4 +125,4 @@
 			object-fit: cover;
 		}
 	}
-}
+} 

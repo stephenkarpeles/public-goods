@@ -211,18 +211,22 @@ h2 {
 
 .sidebar {
   position: sticky;
-  top: 1rem; }
+  top: calc(87px + 1rem); }
+  .admin-bar .sidebar {
+    top: calc(87px + 32px + 1rem); }
   @media screen and (max-width: 767px) {
     .sidebar {
       position: relative;
-      top: 0; } }
+      top: 0; }
+      .admin-bar .sidebar {
+        top: 0; } }
 
 .site-branding {
   position: relative;
   padding: 2.35rem 0;
   width: 90%;
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 87px auto 0;
   background: url("../img/banner-header.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
@@ -232,6 +236,12 @@ h2 {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem; }
+  @media screen and (max-width: 767px) {
+    .site-branding {
+      margin: 72px auto 2.5rem; } }
+  @media screen and (max-width: 782px) {
+    .logged-in .site-branding {
+      margin: 27px auto 2.5rem; } }
   .site-branding h1 {
     font-size: 2.15rem;
     margin-bottom: 1rem; }
@@ -250,14 +260,14 @@ h2 {
   padding: 0 1rem; }
 
 .custom-logo-link img {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 13px;
   width: 110px;
   height: auto;
   margin: 0 auto;
-  z-index: 100;
+  z-index: 3000;
   cursor: pointer; }
   @media screen and (max-width: 767px) {
     .custom-logo-link img {
@@ -266,7 +276,7 @@ h2 {
     top: 45px; }
     @media screen and (max-width: 782px) {
       .admin-bar .custom-logo-link img {
-        top: 59px; } }
+        top: 13px; } }
 
 .menu-toggle {
   display: none;
@@ -276,6 +286,7 @@ h2 {
   border: none;
   padding: 15px 0;
   background: transparent;
+  padding-left: 5%;
   transition: all .15s ease; }
   .menu-toggle:hover, .menu-toggle:focus {
     opacity: .6; }
@@ -292,14 +303,26 @@ h2 {
       display: block; } }
 
 .main-navigation {
-  width: 90%;
-  max-width: 1120px;
   margin: 0 auto;
   padding: 35px 0 30px;
-  position: relative; }
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: white;
+  z-index: 2000;
+  height: 87px; }
+  .logged-in .main-navigation {
+    top: 32px; }
   @media screen and (max-width: 767px) {
     .main-navigation {
       padding: 15px 0; } }
+  @media screen and (max-width: 782px) {
+    .main-navigation {
+      height: 72px; }
+      .admin-bar .main-navigation {
+        top: 0; } }
   .main-navigation ul {
     padding: 0;
     margin: 0;
@@ -345,10 +368,19 @@ h2 {
     .main-navigation a:hover, .main-navigation a:focus {
       opacity: .6; }
 
+.menu-header-navigation-container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+  z-index: 500;
+  padding-bottom: 1rem; }
+
 .mobile-cart-link {
   display: none;
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 23px; }
   .mobile-cart-link a {
     font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
@@ -363,6 +395,10 @@ h2 {
   @media screen and (max-width: 767px) {
     .mobile-cart-link {
       display: block; } }
+
+@media screen and (max-width: 782px) {
+  #wpadminbar {
+    display: none; } }
 
 .site-footer {
   margin-top: 1rem;
@@ -954,8 +990,14 @@ h2 {
 .single .site-branding {
   display: none; }
 .single .site-content {
-  margin-top: 2rem;
+  margin-top: calc(2rem + 87px);
   max-width: 840px; }
+  @media screen and (max-width: 767px) {
+    .single .site-content {
+      margin-top: calc(1.5rem + 72px); } }
+@media screen and (max-width: 782px) {
+  .single.logged-in .site-content {
+    margin-top: 3rem; } }
 .single .entry-main-content img {
   height: auto;
   margin-top: 2.5rem;

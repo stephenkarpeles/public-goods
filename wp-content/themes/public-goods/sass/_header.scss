@@ -3,7 +3,7 @@
 	padding: 2.35rem 0;
 	width: $container-width;
 	max-width: $container-max-width;
-	margin: 0 auto;
+	margin: 87px auto 0; // set top margin to header height
 	background: url('../img/banner-header.jpg') no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -13,6 +13,16 @@
 	flex-direction: column;
 	justify-content: center;
 	margin-bottom: 1rem;
+
+	@include mq(ipad, 'max-width') {
+		margin: 72px auto 2.5rem; // set top margin to header height
+	}
+
+	@include mq(wp-bar-switch, 'max-width') {
+    .logged-in & {
+    	margin: 27px auto 2.5rem; // set top margin to header height
+    }
+	}
 
 	h1 {
 		font-size: 2.15rem;
@@ -43,14 +53,14 @@
 
 .custom-logo-link {
 	img {
-	  position: absolute;
+	  position: fixed;
 	  left: 0;
 	  right: 0;
 	  top: 13px;
 	  width: 110px;
 	  height: auto;
 	  margin: 0 auto;
-	  z-index: 100;
+	  z-index: 3000;
 	  cursor: pointer;
 
 	  @include mq(ipad, 'max-width') {
@@ -61,7 +71,7 @@
 			top: 45px;
 
 			@include mq(wp-bar-switch, 'max-width') {
-        top: 59px;
+        top: 13px;
 			}
 	  }
 	}
@@ -75,6 +85,7 @@
 	border: none;
 	padding: 15px 0;
 	background: transparent;
+	padding-left: 5%;
 
 	@include hover-anim-1;	
 
@@ -96,14 +107,31 @@
 }
 
 .main-navigation {
-	width: $container-width;
-	max-width: $container-max-width;
 	margin: 0 auto;
 	padding: 35px 0 30px;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: white;
+	z-index: 2000;
+	height: 87px;
+
+	.logged-in & {
+		top: $wpadmin-bar-height;
+	}
 
 	@include mq(ipad, 'max-width') {
 		padding: 15px 0;
+	}
+
+	@include mq(wp-bar-switch, 'max-width') {
+		height: 72px;
+
+		.admin-bar & {
+			top: 0;
+		}
 	}
 
 	ul {
@@ -174,10 +202,20 @@
 	}
 }
 
+.menu-header-navigation-container {
+	width: $container-width;
+	max-width: $container-max-width;
+	margin: 0 auto;
+	background: white;
+	position: relative;
+	z-index: 500;
+	padding-bottom: 1rem;
+}
+
 .mobile-cart-link {
 	display: none;
 	position: absolute;
-	right: 0;
+	right: 5%;
 	top: 23px;
 
 	a {
@@ -194,4 +232,11 @@
   @include mq(ipad, 'max-width') {
     display: block
   }
+}
+
+
+#wpadminbar {
+	@include mq(wp-bar-switch, 'max-width') {
+		display: none;
+	}
 }
