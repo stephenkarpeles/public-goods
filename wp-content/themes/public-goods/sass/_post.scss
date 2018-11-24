@@ -1,3 +1,7 @@
+.a2a_kit {
+	display: none;
+}
+
 .single {
 	.site-branding {
 		display: none;
@@ -14,8 +18,24 @@
 
   // 'Add to Any' plugin styles
   .a2a_kit {
+  	display: block;
   	top: calc(2rem + 87px) !important; // add header height
   	left: calc((100vw - 1020px)/2) !important;
+
+  	.sharebar-close {
+    	cursor: pointer;
+    	pointer-events: all;
+    	padding: 8px;
+    	display: block;
+    	position: absolute;
+    	right: 7px;
+    	top: 7px;
+    	content: '\00d7';
+    	font-size: 30px;
+    	z-index: 9000;
+    	font-weight: 100;
+    	font-family: $sans-serif-main;
+    }
 
   	@include mq(desktop, 'max-width') {
       height: 60px !important;
@@ -28,23 +48,13 @@
       width: 100% !important;
       text-align: center !important;
       transform: none !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
       border-radius: 0 !important;
-
-      &:after {
-      	display: block;
-      	position: absolute;
-      	right: 20px;
-      	top: 15px;
-      	content: '\00d7';
-      	font-size: 30px;
-      	z-index: 9000;
-      	font-weight: 100;
-      	font-family: $sans-serif-main;
-      }
+      padding: 12px 0 0 0 !important;
     }
+
+    &.is-closed {
+  		display: none !important;
+  	}
   }
 
   .a2a_vertical_style a {
@@ -99,12 +109,14 @@
 	      width: 100% !important;
 	      text-align: center !important;
 	      transform: none !important;
-	      display: flex !important;
-	      align-items: center !important;
-	      justify-content: center !important;
 	      border-radius: 0 !important;
+	      padding: 12px 0 0 0 !important;
 	    }
 	  }
+
+	  &.is-closed {
+  		display: none !important;
+  	}
   }
 
   &.logged-in {

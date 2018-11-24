@@ -17,3 +17,19 @@ if(modalClose) {
     modalWindow.classList.remove('is-open');
   });
 }
+
+// Sharebar
+const sharebar = document.querySelector('.a2a_kit.a2a_default_style');
+
+sharebarClose = document.createElement('div');
+sharebarClose.setAttribute('class', 'sharebar-close');
+sharebarClose.innerHTML = '&times;';
+
+sharebar.appendChild(sharebarClose);
+
+if(sharebarClose) {
+    sharebarClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    sharebar.classList.add('is-closed');
+  });
+}
