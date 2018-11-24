@@ -498,34 +498,50 @@ h2 {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    justify-content: flex-end; }
+    justify-content: space-between; }
     @media screen and (max-width: 859px) {
       .site-footer__right-block {
-        margin-top: 2.5rem;
+        margin-top: 1.25rem;
         justify-content: center;
         text-align: center;
         align-items: normal; } }
-  .site-footer__social-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2rem; }
+  .site-footer__social-nav {
+    margin-top: 45px; }
     @media screen and (max-width: 859px) {
-      .site-footer__social-nav ul {
-        margin-bottom: 1rem;
-        text-align: center;
-        justify-content: center; } }
-  .site-footer__social-nav li {
-    display: inline-block;
-    list-style-type: none;
-    margin-left: 1rem; }
-    .site-footer__social-nav li:first-child {
-      margin-left: 0; }
-  .site-footer__social-nav a {
-    color: white;
-    font-size: 1.5rem;
-    transition: all .15s ease; }
-    .site-footer__social-nav a:hover, .site-footer__social-nav a:focus {
-      opacity: .6; }
+      .site-footer__social-nav {
+        margin-top: 0;
+        margin-bottom: 10px; } }
+    .site-footer__social-nav ul {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 2rem; }
+      @media screen and (max-width: 859px) {
+        .site-footer__social-nav ul {
+          margin-bottom: 1rem;
+          text-align: center;
+          justify-content: center; } }
+    .site-footer__social-nav li {
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 1rem; }
+      .site-footer__social-nav li:first-child {
+        margin-left: 0; }
+    .site-footer__social-nav a {
+      color: white;
+      text-decoration: underline;
+      transition: all .15s ease; }
+      .site-footer__social-nav a span {
+        position: relative;
+        display: inline-block;
+        font-size: .9rem;
+        margin-left: 10px;
+        top: -4px;
+        text-decoration: underline; }
+      .site-footer__social-nav a i {
+        font-size: 1.7rem;
+        text-decoration: none; }
+      .site-footer__social-nav a:hover, .site-footer__social-nav a:focus {
+        opacity: .6; }
   .site-footer__copyright {
     font-size: .8rem;
     color: #aaaaaa; }

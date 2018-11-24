@@ -150,10 +150,10 @@
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: space-between;
 
 		@include mq(desktop-narrow, 'max-width') {
-			margin-top: 2.5rem;
+			margin-top: 1.25rem;
 			justify-content: center;
 			text-align: center;
 			align-items: normal;
@@ -161,6 +161,13 @@
 	}
 
 	&__social-nav {
+		margin-top: 45px;
+
+		@include mq(desktop-narrow, 'max-width') {
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
 		ul {
 		  display: flex;
 		  justify-content: flex-end;
@@ -185,7 +192,21 @@
 
 		a {
 			color: white;
-			font-size: 1.5rem;
+			text-decoration: underline;
+
+			span {
+				position: relative;
+				display: inline-block;
+				font-size: .9rem;
+				margin-left: 10px;
+				top: -4px;
+				text-decoration: underline;
+			}
+
+			i {
+				font-size: 1.7rem;
+				text-decoration: none;
+			}
 
 			@include hover-anim-1;
 		}

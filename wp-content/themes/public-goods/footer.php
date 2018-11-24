@@ -46,9 +46,9 @@
 			<div class="site-footer__right-block">
 			  <div class="site-footer__social-nav">
 			  	<ul>
-						<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-						<li><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+						<!-- <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li> -->
+						<li><a href=""><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
 			  	</ul>
 			  </div>
 
