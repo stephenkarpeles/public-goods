@@ -24,8 +24,12 @@ const sharebar = document.querySelector('.a2a_kit.a2a_default_style');
 sharebarClose = document.createElement('div');
 sharebarClose.setAttribute('class', 'sharebar-close');
 sharebarClose.innerHTML = '&times;';
-
 sharebar.appendChild(sharebarClose);
+
+sharebarText = document.createElement('div');
+sharebarText.setAttribute('class', 'sharebar-text');
+sharebarText.innerHTML = 'Share';
+sharebar.appendChild(sharebarText);
 
 if(sharebarClose) {
     sharebarClose.addEventListener('click', (e) => {

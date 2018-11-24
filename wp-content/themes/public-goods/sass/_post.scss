@@ -22,19 +22,30 @@
   	top: calc(2rem + 87px) !important; // add header height
   	left: calc((100vw - 1020px)/2) !important;
 
+  	.sharebar-text {
+    	cursor: pointer;
+    	pointer-events: all;
+    	display: block;
+    	position: absolute;
+    	left: 14px;
+    	top: 17px;
+    	font-size: 15px;
+    	z-index: 9000;
+    	font-family: $sans-serif-main;
+    }
+
   	.sharebar-close {
     	cursor: pointer;
     	pointer-events: all;
     	padding: 8px;
     	display: block;
     	position: absolute;
-    	right: 7px;
-    	top: 7px;
-    	content: '\00d7';
-    	font-size: 30px;
+    	right: 6px;
+    	top: 8px;
+    	font-size: 29px;
     	z-index: 9000;
-    	font-weight: 100;
     	font-family: $sans-serif-main;
+    	opacity: .8;
     }
 
   	@include mq(desktop, 'max-width') {
