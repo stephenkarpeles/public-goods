@@ -160,7 +160,42 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Change 'Set featured image' text
  */ 
-function change_featured_image_text( $content ) {
-    return $content = str_replace( __( 'Set featured image' ), __( 'Set thumbnail image' ), $content);
+function cp_replace_featured_image_metabox( $post_type, $context ) {
+	$my_post_type = 'post';
+
+	if ( $post_type == $my_post_type && 'side' == $context ) {
+		remove_meta_box( 'postimagediv', $my_post_type, 'side' );
+
+		add_meta_box( 'postimagediv', __( 'Thumbnail Image' ), 'post_thumbnail_meta_box', $my_post_type, 'side', 'low' );
+	}
+
 }
-add_filter( 'admin_post_thumbnail_html', 'change_featured_image_text' );
+add_action( 'do_meta_boxes', 'cp_replace_featured_image_metabox', 10, 2 );
+
+
+function cp_change_featured_image_link_text( $content, $post_id ) {
+	
+	$post = get_post($post_id);
+
+	if ( 'post' == get_post_type($post) ) {
+		$content = str_replace( 'Set featured image', __( 'Set thumbnail image'), $content );
+		$content = str_replace( 'Remove featured image', __( 'Remove thumbnail image'), $content );
+	}
+	return $content;
+}
+add_filter( 'admin_post_thumbnail_html', 'cp_change_featured_image_link_text', 10, 2 );
+
+
+function cp_update_media_view_featured_image_titles( $settings, $post ) {
+
+	if ( 'post' == $post->post_type ) {
+		$settings['setFeaturedImageTitle'] = __( "Thumbnail Image" );
+		$settings['setFeaturedImage']      = __( "Set thumbnail image" );
+	}
+
+	return $settings;
+}
+
+add_filter( 'media_view_strings', 'cp_update_media_view_featured_image_titles', 10, 2 );
+
+
