@@ -56,7 +56,7 @@
 	  position: fixed;
 	  left: 0;
 	  right: 0;
-	  top: 13px;
+	  top: 15px;
 	  width: 110px;
 	  height: auto;
 	  margin: 0 auto;
@@ -71,7 +71,7 @@
 			top: 45px;
 
 			@include mq(wp-bar-switch, 'max-width') {
-        top: 13px;
+        top: 15px;
 			}
 	  }
 	}

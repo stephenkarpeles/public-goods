@@ -31,7 +31,7 @@ sharebarText.setAttribute('class', 'sharebar-text');
 sharebarText.innerHTML = 'Share';
 sharebar.appendChild(sharebarText);
 
-if(sharebarClose) {
+if(sharebar) {
     sharebarClose.addEventListener('click', (e) => {
     e.preventDefault();
     sharebar.classList.add('is-closed');
