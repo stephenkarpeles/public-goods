@@ -157,3 +157,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Change 'Set featured image' text
+ */ 
+function change_featured_image_text( $content ) {
+    return $content = str_replace( __( 'Set featured image' ), __( 'Set thumbnail image' ), $content);
+}
+add_filter( 'admin_post_thumbnail_html', 'change_featured_image_text' );
