@@ -78,7 +78,9 @@
 	        setup_postdata($post);
 
 	        echo '<div class="related-posts__post">';
+	        echo '<a href="' . get_the_permalink() . '">';
 	        echo public_goods_post_thumbnail();
+	        echo '</a>';
 	        echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
 	        echo '<p>' . wp_trim_words( get_the_content(), 10, '.' ) . '</p>';
 	        echo '<a class="related-posts__read-more" href="' . get_permalink() . '">Read More</a>';
