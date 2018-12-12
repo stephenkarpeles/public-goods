@@ -35,22 +35,46 @@
 	</div>
 
 	<!-- Editor's Picks -->
-	<div class="featured-block">
-		<h2 class="featured-block__heading">
-			Editor's Pick
-		</h2>
-		<div class="featured-block__image">
-		<img src="https://cdn.shopify.com/s/files/1/0838/7991/t/47/assets/bath.jpg?13723350875874809438" alt="Featured Image">
-		</div>
-		<div class="featured-block__content">		
-			<h3 class="featured-block__secondary-heading">
-				What a waste.
-			</h3>
-			<p class="featured-block__blurb">
-				69 totally useful ways to repurpose commonly discarded items.
-			</p>
-			<a class="featured-block__link" hred="#">Read More</a>
-		</div>
-	</div>
+	<?php 
+        $args = array (
+            'showposts' => 1,
+            'post_type' => 'post',
+            'meta_key' => 'editors_pick_post',
+            'meta_value' => 'yes'
+        );
+
+		$the_editor_query = new WP_Query( $args );
+
+		?>
+
+		<?php if( $the_editor_query->have_posts() ): ?>
+			<div class="featured-block">
+				<h2 class="featured-block__heading">
+					Editor's Pick
+				</h2>
+			<?php while( $the_editor_query->have_posts() ) : $the_editor_query->the_post(); ?>
+
+				<div class="featured-block__image">
+					<a href="<?php the_permalink(); ?>">
+					  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+					</a>
+				</div>
+				<div class="featured-block__content">		
+					<h3 class="featured-block__secondary-heading">
+						<?php the_title(); ?>
+					</h3>
+					<p class="featured-block__blurb">
+						<?php
+							echo wp_trim_words( get_the_content(), 15, '.' );
+						?>
+					</p>
+					<a class="featured-block__link" href="<?php the_permalink(); ?>">Read More</a>
+				</div>
+
+			<?php endwhile; ?>
+		  </div>
+	  <?php endif; ?>
+
+	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>	
 
 </aside><!-- #secondary -->

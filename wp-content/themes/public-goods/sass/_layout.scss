@@ -6,19 +6,19 @@
 }
 
 .sidebar {
-  position: sticky;
-  top: calc(87px + 1rem); // height of header plus margin
+ //  position: sticky;
+ //  top: calc(87px + 1rem); // height of header plus margin
 
-  .admin-bar & {
-  	top: calc(87px + 32px + 1rem); // height of header plus margin
-  }
+ //  .admin-bar & {
+ //  	top: calc(87px + 32px + 1rem); // height of header plus margin
+ //  }
 
-	@include mq(ipad, 'max-width') {
-		position: relative;
-		top: 0;
+	// @include mq(ipad, 'max-width') {
+	// 	position: relative;
+	// 	top: 0;
 
-		.admin-bar & {
-	  	top: 0;
-	  }
-	}
+	// 	.admin-bar & {
+	//   	top: 0;
+	//   }
+	// }
 }

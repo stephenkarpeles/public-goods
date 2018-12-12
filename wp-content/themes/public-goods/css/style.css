@@ -219,18 +219,6 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
-.sidebar {
-  position: sticky;
-  top: calc(87px + 1rem); }
-  .admin-bar .sidebar {
-    top: calc(87px + 32px + 1rem); }
-  @media screen and (max-width: 767px) {
-    .sidebar {
-      position: relative;
-      top: 0; }
-      .admin-bar .sidebar {
-        top: 0; } }
-
 .site-branding {
   position: relative;
   padding: 2.35rem 0;
