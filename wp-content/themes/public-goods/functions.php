@@ -199,3 +199,23 @@ function cp_update_media_view_featured_image_titles( $settings, $post ) {
 add_filter( 'media_view_strings', 'cp_update_media_view_featured_image_titles', 10, 2 );
 
 
+/**
+ * Meta OG/Twitter image setup
+ */
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+  $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches[1][0];
+
+  if(empty($first_img)) {
+    $first_img = $post_thumbnail_url;
+  }
+  return $first_img;
+}
+
+
