@@ -37,39 +37,39 @@
 	<!-- Editor's Picks -->
 	<?php 
         $args = array (
-            'showposts' => 1,
-            'post_type' => 'post',
-            'meta_key' => 'editors_pick_post',
-            'meta_value' => 'yes'
+          'post_type'				=> 'post',
+					'posts_per_page' 	=> 1,
+					'key' 				=> 'editors_pick_post',
+					'value' 			=> 'yes'
         );
 
-		$the_editor_query = new WP_Query( $args );
+		$query = new WP_Query( $args );
 
 		?>
 
-		<?php if( $the_editor_query->have_posts() ): ?>
+		<?php if( $query->have_posts() ): ?>
 			<div class="featured-block">
 				<h2 class="featured-block__heading">
 					Editor's Pick
 				</h2>
-			<?php while( $the_editor_query->have_posts() ) : $the_editor_query->the_post(); ?>
+			<?php while( $query->have_posts() ) : $query->the_post(); ?>				
 
-				<div class="featured-block__image">
-					<a href="<?php the_permalink(); ?>">
-					  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-					</a>
-				</div>
-				<div class="featured-block__content">		
-					<h3 class="featured-block__secondary-heading">
-						<?php the_title(); ?>
-					</h3>
-					<p class="featured-block__blurb">
-						<?php
-							echo wp_trim_words( get_the_content(), 15, '.' );
-						?>
-					</p>
-					<a class="featured-block__link" href="<?php the_permalink(); ?>">Read More</a>
-				</div>
+					<div class="featured-block__image">
+						<a href="<?php the_permalink(); ?>">
+						  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+						</a>
+					</div>
+					<div class="featured-block__content">		
+						<h3 class="featured-block__secondary-heading">
+							<?php the_title(); ?>
+						</h3>
+						<p class="featured-block__blurb">
+							<?php
+								echo wp_trim_words( get_the_content(), 15, '.' );
+							?>
+						</p>
+						<a class="featured-block__link" href="<?php the_permalink(); ?>">Read More</a>
+					</div>				
 
 			<?php endwhile; ?>
 		  </div>

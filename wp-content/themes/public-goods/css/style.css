@@ -219,6 +219,18 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
+.sidebar {
+  position: sticky;
+  bottom: 1rem;
+  right: 0;
+  margin-left: auto; }
+  @media screen and (max-width: 1023px) {
+    .sidebar {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin-left: 0; } }
+
 .site-branding {
   position: relative;
   padding: 2.35rem 0;
@@ -885,24 +897,23 @@ h2 {
         max-width: 100%;
         object-fit: cover; }
 
-.blog .site-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; }
+@media screen and (max-width: 1023px) {
+  .blog .site-content {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; } }
+.blog .site-content #primary {
+  width: 67%; }
   @media screen and (max-width: 1023px) {
-    .blog .site-content {
-      flex-direction: column; } }
-  .blog .site-content #primary {
-    width: 67%; }
-    @media screen and (max-width: 1023px) {
-      .blog .site-content #primary {
-        width: 100%; } }
-  .blog .site-content #secondary {
-    width: 28%; }
-    @media screen and (max-width: 1023px) {
-      .blog .site-content #secondary {
-        width: 100%;
-        margin-top: 4rem; } }
+    .blog .site-content #primary {
+      width: 100%; } }
+.blog .site-content #secondary {
+  width: 28%; }
+  @media screen and (max-width: 1023px) {
+    .blog .site-content #secondary {
+      width: 100%;
+      margin-top: 4rem; } }
 .blog .entry-content {
   display: flex;
   flex-direction: column;

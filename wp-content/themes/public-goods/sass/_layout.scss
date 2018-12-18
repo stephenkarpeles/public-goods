@@ -6,6 +6,18 @@
 }
 
 .sidebar {
+	position: sticky;
+	bottom: 1rem;
+	right: 0;
+	margin-left: auto;
+
+	@include mq(desktop, 'max-width') {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin-left: 0;
+	}
+
  //  position: sticky;
  //  top: calc(87px + 1rem); // height of header plus margin
 
