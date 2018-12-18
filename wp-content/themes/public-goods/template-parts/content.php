@@ -39,7 +39,7 @@
 
 		<div class="entry-excerpt">
 			<?php
-				echo wp_trim_words( get_the_content(), 25, '.' );
+				the_content( '', TRUE );
 			?>
 		</div>
 
