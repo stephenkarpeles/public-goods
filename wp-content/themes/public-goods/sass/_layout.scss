@@ -5,6 +5,12 @@
 	margin: 0 auto;
 }
 
+.site-content {
+	@media screen and (min-height: 1160px) {
+	  display: flex;
+	}
+}
+
 .sidebar {
 	position: sticky;
 	bottom: 1rem;

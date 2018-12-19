@@ -219,6 +219,10 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
+@media screen and (min-height: 1160px) {
+  .site-content {
+    display: flex; } }
+
 .sidebar {
   position: sticky;
   bottom: 1rem;
