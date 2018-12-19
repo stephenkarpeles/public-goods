@@ -36,45 +36,52 @@
 
 	<!-- Editor's Picks -->
 	<?php 
-        $args = array (
-          'post_type'				=> 'post',
-					'posts_per_page' 	=> 1,
-					'key' 				=> 'editors_pick_post',
-					'value' 			=> 'yes'
-        );
 
-		$query = new WP_Query( $args );
+		$posts = get_posts(array(
+			'meta_query' => array(
+				array(
+					'key' => 'editors_pick_post',
+					'compare' => '=',
+					'value' => '1'
+				)
+			)
+		));
 
-		?>
-
-		<?php if( $query->have_posts() ): ?>
+		if( $posts ): ?>
+			
 			<div class="featured-block">
 				<h2 class="featured-block__heading">
 					Editor's Pick
 				</h2>
-			<?php while( $query->have_posts() ) : $query->the_post(); ?>				
+				
+			<?php foreach( $posts as $post ): 
+				
+				setup_postdata( $post )
+				
+				?>
+				<div class="featured-block__image">
+					<a href="<?php the_permalink(); ?>">
+					  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+					</a>
+				</div>
+				<div class="featured-block__content">		
+					<h3 class="featured-block__secondary-heading">
+						<?php the_title(); ?>
+					</h3>
+					<p class="featured-block__blurb">
+						<?php
+							echo wp_trim_words( get_the_content(), 15, '.' );
+						?>
+					</p>
+					<a class="featured-block__link" href="<?php the_permalink(); ?>">Read More</a>
+				</div>
+			
+			<?php endforeach; ?>
+			
+			</div>
+			
+			<?php wp_reset_postdata(); ?>
 
-					<div class="featured-block__image">
-						<a href="<?php the_permalink(); ?>">
-						  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-						</a>
-					</div>
-					<div class="featured-block__content">		
-						<h3 class="featured-block__secondary-heading">
-							<?php the_title(); ?>
-						</h3>
-						<p class="featured-block__blurb">
-							<?php
-								echo wp_trim_words( get_the_content(), 15, '.' );
-							?>
-						</p>
-						<a class="featured-block__link" href="<?php the_permalink(); ?>">Read More</a>
-					</div>				
-
-			<?php endwhile; ?>
-		  </div>
-	  <?php endif; ?>
-
-	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>	
+		<?php endif; ?>
 
 </aside><!-- #secondary -->
