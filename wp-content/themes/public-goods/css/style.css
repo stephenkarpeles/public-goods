@@ -219,15 +219,19 @@ h2 {
   max-width: 1120px;
   margin: 0 auto; }
 
-@media screen and (min-height: 1160px) {
-  .site-content {
-    display: flex; } }
-
 .sidebar {
+  position: -webkit-sticky;
   position: sticky;
+  display: block;
   bottom: 1rem;
   right: 0;
-  margin-left: auto; }
+  margin-left: auto;
+  opacity: 1;
+  transition: opacity .5s ease; }
+  .sidebar.is-not-fixed-sidebar {
+    opacity: 0; }
+  .sidebar.is-fully-hidden-sidebar {
+    display: none; }
   @media screen and (max-width: 1023px) {
     .sidebar {
       position: relative;

@@ -37,3 +37,28 @@ if(sharebar) {
     sharebar.classList.add('is-closed');
   });
 }
+
+// Fixed sidebar on scroll adjustment
+window.onscroll = function (ev) {
+  const content = document.querySelector('.content-area');
+  const sidebar = document.querySelector('.sidebar');
+  const blogWrapper = document.querySelector('.blog .site');
+  const sidebarHeight = sidebar.offsetHeight;
+  const contentHeight = content.offsetHeight;
+  const viewportHeight = window.innerHeight;
+  const scrollTop = window.pageYOffset || document.body.scrollTop;
+  
+  if (scrollTop > (contentHeight - 1000)) {
+    sidebar.classList.add('is-not-fixed-sidebar');
+    //sidebar.style.marginBottom = "-" + sidebarHeight + "px";
+    //blogWrapper.style.marginBottom = "-" + sidebarHeight + "px";
+  } else {
+    sidebar.classList.remove('is-not-fixed-sidebar');
+  }
+
+  if (scrollTop > (contentHeight - 400)) {
+    sidebar.classList.add('is-fully-hidden-sidebar');
+  } else {
+    sidebar.classList.remove('is-fully-hidden-sidebar');
+  }
+};

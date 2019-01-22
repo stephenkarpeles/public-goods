@@ -5,17 +5,29 @@
 	margin: 0 auto;
 }
 
-.site-content {
-	@media screen and (min-height: 1160px) {
-	  display: flex;
-	}
-}
+// .site-content {
+// 	@media screen and (min-height: 1160px) {
+// 	  display: flex;
+// 	}
+// }
 
 .sidebar {
+	position: -webkit-sticky;
 	position: sticky;
+	display: block;
 	bottom: 1rem;
 	right: 0;
 	margin-left: auto;
+	opacity: 1;
+	transition: opacity .5s ease;
+
+	&.is-not-fixed-sidebar {
+		opacity: 0;
+	}
+
+	&.is-fully-hidden-sidebar {
+		display: none;
+	}
 
 	@include mq(desktop, 'max-width') {
 		position: relative;
