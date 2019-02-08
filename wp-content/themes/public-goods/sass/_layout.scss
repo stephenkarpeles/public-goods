@@ -23,6 +23,10 @@
 
 	&.is-not-fixed-sidebar {
 		opacity: 0;
+
+		@media screen and (min-height: 1081px) {
+	    display: none !important;
+	  }
 	}
 
 	&.is-fully-hidden-sidebar {

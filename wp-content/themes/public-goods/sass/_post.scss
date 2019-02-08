@@ -242,4 +242,10 @@
 			object-fit: cover;
 		}
 	}
+
+  @include mq(tablet, 'max-width') {
+    blockquote {
+      font-size: 1.75rem;
+    }
+  }
 } 

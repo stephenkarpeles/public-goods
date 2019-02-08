@@ -42,3 +42,8 @@ input[type="submit"],
 .screen-reader-text {
 	@include visually-hide;
 }
+
+// Hide the silly little Bitnami icon in the corner
+#bitnami-banner {
+	display: none !important;
+}

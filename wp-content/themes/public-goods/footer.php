@@ -48,7 +48,7 @@
 			  	<ul>
 						<!-- <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 						<li><a href=""><i class="fab fa-twitter"></i></a></li> -->
-						<li><a href=""><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+						<li><a href="https://www.instagram.com/public_goods_/?hl=en" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
 			  	</ul>
 			  </div>
 
@@ -79,6 +79,17 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/navigation.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/skip-link-focus-fix.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132909631-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132909631-1');
+</script>
 
 </body>
 </html>

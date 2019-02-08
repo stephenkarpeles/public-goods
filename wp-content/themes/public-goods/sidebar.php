@@ -66,7 +66,7 @@
 				</div>
 				<div class="featured-block__content">		
 					<h3 class="featured-block__secondary-heading">
-						<?php the_title(); ?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</h3>
 					<p class="featured-block__blurb">
 						<?php
