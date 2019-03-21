@@ -168,8 +168,9 @@
 		}
 
 		&:nth-child(3) a {
-      border: solid 1px $primary-color;
+      border: solid 1px $secondary-color;
       padding: 10px 17px 9px;
+			color: black;
 
       @include mq(ipad, 'max-width') {
       	border: none;
@@ -192,11 +193,13 @@
 
 	a {
 		font-family: $sans-serif-main;
-		text-transform: uppercase;
-		color: $text-color-light;
+		text-transform: none;
+		color: $text-color-mid-alt;
 		font-weight: 300;
-		font-size: 12px;
-		letter-spacing: 1px;
+		-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+		font-size: 13px;
+		letter-spacing: 1.5px;
 
 		@include hover-anim-1;
 	}
@@ -220,10 +223,10 @@
 
 	a {
 		font-family: $sans-serif-main;
-		text-transform: uppercase;
+		text-transform: none;
 		color: $text-color-light;
 		font-weight: 300;
-		font-size: 12px;
+		font-size: 13px;
 		letter-spacing: 1px;
 
 		@include hover-anim-1;

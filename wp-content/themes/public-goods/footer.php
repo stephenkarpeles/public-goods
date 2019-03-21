@@ -34,10 +34,10 @@
 
 				<div class="site-footer__nav-menu">
 					<ul>
-						<li><a href="">Contact</a></li>
-						<li><a href="">Shipping</a></li>
-						<li><a href="">Privacy Policy</a></li>
-						<li><a href="">Terms and Service</a></li>
+						<li><a href="mailto:service@publicgoods.com">Contact</a></li>
+						<li><a href="https://www.publicgoods.com/pages/shipping" target="_blank">Shipping</a></li>
+						<li><a href="https://www.publicgoods.com/pages/privacy-policy" target="_blank">Privacy Policy</a></li>
+						<li><a href="https://www.publicgoods.com/pages/terms-and-conditions" target="_blank">Terms and Service</a></li>
 					</ul>
 				</div>
 

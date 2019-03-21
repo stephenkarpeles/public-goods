@@ -222,6 +222,13 @@ h2 {
   .idea-form button.frm_button_submit:hover {
     opacity: .9; }
 
+.mobile-form-wrap {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .mobile-form-wrap {
+      display: block;
+      margin-bottom: 4em; } }
+
 .site-content,
 .container {
   width: 90%;
@@ -373,8 +380,9 @@ h2 {
     .main-navigation li:nth-child(2) {
       margin-right: auto; }
     .main-navigation li:nth-child(3) a {
-      border: solid 1px #67837e;
-      padding: 10px 17px 9px; }
+      border: solid 1px #db886c;
+      padding: 10px 17px 9px;
+      color: black; }
       @media screen and (max-width: 767px) {
         .main-navigation li:nth-child(3) a {
           border: none;
@@ -389,11 +397,13 @@ h2 {
           display: none; } }
   .main-navigation a {
     font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    color: #aaaaaa;
+    text-transform: none;
+    color: #999999;
     font-weight: 300;
-    font-size: 12px;
-    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 13px;
+    letter-spacing: 1.5px;
     transition: all .15s ease; }
     .main-navigation a:hover, .main-navigation a:focus {
       opacity: .6; }
@@ -414,10 +424,10 @@ h2 {
   top: 23px; }
   .mobile-cart-link a {
     font-family: "NeuzeitBook", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
+    text-transform: none;
     color: #aaaaaa;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 1px;
     transition: all .15s ease; }
     .mobile-cart-link a:hover, .mobile-cart-link a:focus {
@@ -1148,6 +1158,11 @@ h2 {
   height: auto;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem; }
+.single .entry-main-content figure {
+  margin: 0 0 2.5rem;
+  max-width: 100%; }
+  .single .entry-main-content figure img {
+    margin-bottom: 1rem; }
 .single .entry-main-content ol,
 .single .entry-main-content ul {
   margin-top: 0;

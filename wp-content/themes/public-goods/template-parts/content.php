@@ -28,7 +28,7 @@
 				?>
 				<div class="entry-meta">
 					<div class="entry-meta__author">by <?php the_author(); ?></div>
-					<div class="entry-meta__date"><?php the_date('F j, Y'); ?></div>
+					<div class="entry-meta__date"><?php echo get_the_date('F j, Y'); ?></div>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
