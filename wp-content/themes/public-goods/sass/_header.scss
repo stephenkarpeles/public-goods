@@ -56,22 +56,23 @@
 	  position: fixed;
 	  left: 0;
 	  right: 0;
-	  top: 15px;
-	  width: 110px;
+	  top: 4px;
+	  width: 128px;
 	  height: auto;
 	  margin: 0 auto;
 	  z-index: 3000;
 	  cursor: pointer;
 
 	  @include mq(ipad, 'max-width') {
-	  	width: 80px;
+	  	width: 85px;
+	  	top: 10px;
 	  }
 
 	  .admin-bar & {
-			top: 45px;
+			top: 35px;
 
 			@include mq(wp-bar-switch, 'max-width') {
-        top: 15px;
+        top: 10px;
 			}
 	  }
 	}

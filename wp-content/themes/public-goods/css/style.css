@@ -300,20 +300,21 @@ h2 {
   position: fixed;
   left: 0;
   right: 0;
-  top: 15px;
-  width: 110px;
+  top: 4px;
+  width: 128px;
   height: auto;
   margin: 0 auto;
   z-index: 3000;
   cursor: pointer; }
   @media screen and (max-width: 767px) {
     .custom-logo-link img {
-      width: 80px; } }
+      width: 85px;
+      top: 10px; } }
   .admin-bar .custom-logo-link img {
-    top: 45px; }
+    top: 35px; }
     @media screen and (max-width: 782px) {
       .admin-bar .custom-logo-link img {
-        top: 15px; } }
+        top: 10px; } }
 
 .menu-toggle {
   display: none;

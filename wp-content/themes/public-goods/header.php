@@ -47,7 +47,11 @@
 		<p id="output" style="position:fixed; left:0; top:0; padding:10px; font-weight:bold">
 	You have scrolled the page by:
 </p>
-		<?php the_custom_logo(); ?>
+
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+			<img width="350" height="180" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-svg.svg" class="custom-logo" alt="Public Words" itemprop="logo">
+		</a>
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<span></span>
