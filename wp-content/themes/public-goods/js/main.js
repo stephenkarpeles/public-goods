@@ -62,3 +62,38 @@ window.onscroll = function (ev) {
     sidebar.classList.remove('is-fully-hidden-sidebar');
   }
 };
+
+// Drip Form
+const emailForm = document.forms['email-capture']  
+//     let emailInput = document.getElementById('emailinput').value
+  let emailConfirm = document.getElementById('email-footer-confirmation')
+    
+    let footerEmail = document.getElementById('email-success')
+    let subscribeButton = document.getElementById('drip-submit-27436')
+  if (document.forms['email-capture']) {
+    emailForm.addEventListener('submit', e => {  
+     e.preventDefault()  
+     let emailText = emailForm.elements.namedItem("email").value;
+     
+ 
+       _dcq.push(
+      [
+        "subscribe",
+        {
+          campaign_id: "220285039",
+          fields: {
+            email: emailText
+          }
+        }
+      ]
+       )
+//      _dcq.push(["identify", {
+//         email: emailText,
+//        tags: ["Membership trial cj"],
+//          user_id: emailText,
+//       }]);
+       emailForm.style.display = "none"
+       emailConfirm.innerText = "Thank you for signing up. You're in."
+       emailForm.reset()       
+     })
+}

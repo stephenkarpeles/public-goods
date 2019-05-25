@@ -16,33 +16,27 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+
 	<meta property="og:image" content="<?php echo catch_that_image(); ?>" />
+	<meta property="og:title" content="<?php wp_title(''); ?>">
+  <meta property="og:url" content="<?php the_permalink(); ?>">
+
 	<meta name="twitter:image" content="<?php echo catch_that_image(); ?>">
+	<meta name="twitter:title" content="<?php wp_title(''); ?>">
+	
+	<?php if ( is_home() ) : ?>
+	  <title>The Public Goods Blog</title>
+	<?php else : ?>
+	  <title><?php wp_title(''); ?></title>
+    <?php endif; ?>
 
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-NZB6XKR');</script>
-	<!-- End Google Tag Manager -->
 
 	<!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67055015-7"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-67055015-7');
-	</script>
 
 	<?php wp_head(); ?>
 </head>
@@ -58,12 +52,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'public-goods' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<p id="output" style="position:fixed; left:0; top:0; padding:10px; font-weight:bold">
-	You have scrolled the page by:
-</p>
 
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
-			<img width="350" height="180" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-svg.svg" class="custom-logo" alt="Public Words" itemprop="logo">
+		<a href="https://www.publicgoods.com/" class="custom-logo-link" rel="home" itemprop="url">
+			<img width="350" height="180" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-svg.svg" class="custom-logo" alt="Public Goods" itemprop="logo">
 		</a>
 
 		<nav id="site-navigation" class="main-navigation">
@@ -79,7 +70,7 @@
 			?>
 
 			<div class="mobile-cart-link">
-				<a href="https://www.publicgoods.com/cart">Cart</a>
+				<a href="https://www.publicgoods.com/pages/free-gift-blog-signup">Free Trial</a>
 			</div>
 		</nav><!-- #site-navigation -->
 		
@@ -87,7 +78,7 @@
 			<?php
 			  if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+				<h1 class="site-title">The Public Goods Blog.</h1>
 				<?php
 			else :
 				?>
