@@ -1,7 +1,7 @@
 <!-- Editor's Picks -->
 <?php 
 
-  $posts = get_posts(array(
+  $editorposts = get_posts(array(
     'meta_query' => array(
       array(
         'key' => 'editors_pick_post',
@@ -11,14 +11,14 @@
     )
   ));
 
-  if( $posts ): ?>
+  if( $editorposts ): ?>
     
     <div class="featured-block">
       <h2 class="featured-block__heading">
         Editor's Pick
       </h2>
       
-    <?php foreach( $posts as $post ): 
+    <?php foreach( $editorposts as $post ): 
       
       setup_postdata( $post )
       

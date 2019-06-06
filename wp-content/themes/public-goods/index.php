@@ -52,7 +52,7 @@ get_header();
 	        if ($postnum == 6) { ?>
 
 	        	<div class="mobile-editors-pick-wrap">
-	            <?php include('inc/editors-pick.php'); ?>
+	        		<?php include('inc/editors-pick.php'); ?>
 	          </div>
 
 				<?php }; ?>
