@@ -93,7 +93,7 @@ const emailForm = document.forms['email-capture']
 //          user_id: emailText,
 //       }]);
        emailForm.style.display = "none"
-       emailConfirm.innerText = "Thank you for signing up. You're in."
+       emailConfirm.innerHTML = '<div class="drip-form--sidebar"><h3>Get the goods.</h3><div>Thanks for signing up. Please check your email and confirm your subscription.</div></div>'
        emailForm.reset()       
      })
 }

@@ -45,16 +45,15 @@ get_header();
 				if ($postnum == 3) { ?>
 
 		    	<div class="mobile-form-wrap">
-		    		<form action="https://www.getdrip.com/forms/263175359/submissions" method="post" data-drip-embedded-form="263175359" class="drip-form--sidebar">
-						  <h3 data-drip-attribute="headline">Join the good.</h3>
-						  <div data-drip-attribute="description">Join our newsletter.</div>
-						    <label for="drip-email">Enter your email</label>
-							<div class="input-wrap">
-						    <input type="email" id="drip-email" name="fields[email]" value="" placeholder="Enter your email" />
-						    <input type="submit" value="Subscribe" data-drip-attribute="sign-up-button" />
-							</div>
-						</form>
+		    		<?php include('inc/drip-newsletter-form.php'); ?>
 		    	</div>
+
+		    <?php } 
+	        if ($postnum == 6) { ?>
+
+	        	<div class="mobile-editors-pick-wrap">
+	            <?php include('inc/editors-pick.php'); ?>
+	          </div>
 
 				<?php }; ?>
 			<?php	endwhile; ?>
