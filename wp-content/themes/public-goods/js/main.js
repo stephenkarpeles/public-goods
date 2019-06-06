@@ -68,7 +68,6 @@ const emailForm = document.forms['email-capture']
 //     let emailInput = document.getElementById('emailinput').value
   let emailConfirm = document.getElementById('email-footer-confirmation')
     
-    let footerEmail = document.getElementById('email-success')
     let subscribeButton = document.getElementById('drip-submit-27436')
   if (document.forms['email-capture']) {
     emailForm.addEventListener('submit', e => {  
@@ -93,7 +92,41 @@ const emailForm = document.forms['email-capture']
 //          user_id: emailText,
 //       }]);
        emailForm.style.display = "none"
-       emailConfirm.innerHTML = '<div class="drip-form--sidebar"><h3>Get the goods.</h3><div>Thanks for signing up. Please check your email and confirm your subscription.</div></div>'
+       emailConfirm.innerHTML = '<div class="drip-form--sidebar"><h3>Get the goods.</h3><div>Thank you for signing up. You&rsquo;re in.</div></div>'
        emailForm.reset()       
+     })
+}
+
+// Drip Form MOBILE
+const emailFormMobile = document.forms['email-capture-mobile']  
+//     let emailInput = document.getElementById('emailinput').value
+  let emailConfirmMobile = document.getElementById('email-footer-confirmation-mobile')
+    
+    let subscribeButtonMobile = document.getElementById('drip-submit-27436-mobile')
+  if (document.forms['email-capture-mobile']) {
+    emailFormMobile.addEventListener('submit', e => {  
+     e.preventDefault()  
+     let emailTextMobile = emailFormMobile.elements.namedItem("email").value;
+     
+ 
+       _dcq.push(
+      [
+        "subscribe",
+        {
+          campaign_id: "220285039",
+          fields: {
+            email: emailTextMobile
+          }
+        }
+      ]
+       )
+//      _dcq.push(["identify", {
+//         email: emailText,
+//        tags: ["Membership trial cj"],
+//          user_id: emailText,
+//       }]);
+       emailFormMobile.style.display = "none"
+       emailConfirmMobile.innerHTML = '<div class="drip-form--sidebar"><h3>Get the goods.</h3><div>Thank you for signing up. You&rsquo;re in.</div></div>'
+       emailFormMobile.reset()       
      })
 }

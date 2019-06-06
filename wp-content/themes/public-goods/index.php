@@ -45,7 +45,7 @@ get_header();
 				if ($postnum == 3) { ?>
 
 		    	<div class="mobile-form-wrap">
-		    		<?php include('inc/drip-newsletter-form.php'); ?>
+		    		<?php include('inc/drip-newsletter-form-mobile.php'); ?>
 		    	</div>
 
 		    <?php } 
